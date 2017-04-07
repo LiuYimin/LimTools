@@ -15,6 +15,9 @@
 		5A1E24DB1E973C6B0083F887 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A1E24D91E973C6B0083F887 /* LaunchScreen.storyboard */; };
 		5A1E24E61E973C6B0083F887 /* LimToolsOCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1E24E51E973C6B0083F887 /* LimToolsOCTests.m */; };
 		5A1E24F11E973C6B0083F887 /* LimToolsOCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1E24F01E973C6B0083F887 /* LimToolsOCUITests.m */; };
+		5A1E25011E973DF10083F887 /* QRView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1E25001E973DF10083F887 /* QRView.m */; };
+		5A1E25051E973EB70083F887 /* NSString+Valid.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1E25041E973EB70083F887 /* NSString+Valid.m */; };
+		5A1E25071E9741090083F887 /* StringValidTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1E25061E9741090083F887 /* StringValidTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,12 @@
 		5A1E24EC1E973C6B0083F887 /* LimToolsOCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LimToolsOCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A1E24F01E973C6B0083F887 /* LimToolsOCUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LimToolsOCUITests.m; sourceTree = "<group>"; };
 		5A1E24F21E973C6B0083F887 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A1E24FF1E973DF10083F887 /* QRView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRView.h; sourceTree = "<group>"; };
+		5A1E25001E973DF10083F887 /* QRView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRView.m; sourceTree = "<group>"; };
+		5A1E25021E973E630083F887 /* Tools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
+		5A1E25031E973EB70083F887 /* NSString+Valid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Valid.h"; sourceTree = "<group>"; };
+		5A1E25041E973EB70083F887 /* NSString+Valid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Valid.m"; sourceTree = "<group>"; };
+		5A1E25061E9741090083F887 /* StringValidTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringValidTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +110,7 @@
 		5A1E24CA1E973C6B0083F887 /* LimToolsOC */ = {
 			isa = PBXGroup;
 			children = (
+				5A1E24FE1E973D970083F887 /* Tools */,
 				5A1E24CE1E973C6B0083F887 /* AppDelegate.h */,
 				5A1E24CF1E973C6B0083F887 /* AppDelegate.m */,
 				5A1E24D11E973C6B0083F887 /* ViewController.h */,
@@ -126,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				5A1E24E51E973C6B0083F887 /* LimToolsOCTests.m */,
+				5A1E25061E9741090083F887 /* StringValidTests.m */,
 				5A1E24E71E973C6B0083F887 /* Info.plist */,
 			);
 			path = LimToolsOCTests;
@@ -138,6 +149,18 @@
 				5A1E24F21E973C6B0083F887 /* Info.plist */,
 			);
 			path = LimToolsOCUITests;
+			sourceTree = "<group>";
+		};
+		5A1E24FE1E973D970083F887 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				5A1E24FF1E973DF10083F887 /* QRView.h */,
+				5A1E25001E973DF10083F887 /* QRView.m */,
+				5A1E25031E973EB70083F887 /* NSString+Valid.h */,
+				5A1E25041E973EB70083F887 /* NSString+Valid.m */,
+				5A1E25021E973E630083F887 /* Tools.h */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,8 +300,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A1E24D31E973C6B0083F887 /* ViewController.m in Sources */,
+				5A1E25011E973DF10083F887 /* QRView.m in Sources */,
 				5A1E24D01E973C6B0083F887 /* AppDelegate.m in Sources */,
 				5A1E24CD1E973C6B0083F887 /* main.m in Sources */,
+				5A1E25051E973EB70083F887 /* NSString+Valid.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A1E24E61E973C6B0083F887 /* LimToolsOCTests.m in Sources */,
+				5A1E25071E9741090083F887 /* StringValidTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +540,7 @@
 				5A1E24F71E973C6B0083F887 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5A1E24F81E973C6B0083F887 /* Build configuration list for PBXNativeTarget "LimToolsOCTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +549,7 @@
 				5A1E24FA1E973C6B0083F887 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5A1E24FB1E973C6B0083F887 /* Build configuration list for PBXNativeTarget "LimToolsOCUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +558,7 @@
 				5A1E24FD1E973C6B0083F887 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
