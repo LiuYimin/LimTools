@@ -15,7 +15,8 @@
     if (self) {
         /*  生成二维码--应用  */
         UIImage *qrcode = [self createNonInterpolatedUIImageFormCIImage:[self createQRForString:qrStr] withSize:250.0f];
-        self.image = qrcode;
+        
+        self.image = qrcode;//[self imageBlackToTransparent: withRed:255 andGreen:90 andBlue:92];
         /*  生成二维码--应用end*/
     }
     return self;

@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "Tools.h"
 
 @interface ViewController ()
 
@@ -16,6 +17,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    QRView * _qrCodeView = [[QRView alloc] initWithQRString:@"fjlskfjslkfjlsd"];
+    _qrCodeView.frame = CGRectMake(40, 120, 200, 200);
+    [self.view addSubview:_qrCodeView];
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
