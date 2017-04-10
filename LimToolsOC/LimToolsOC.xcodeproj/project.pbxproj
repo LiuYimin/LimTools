@@ -21,6 +21,11 @@
 		5A1E25151E97577B0083F887 /* QRView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1E25121E97577B0083F887 /* QRView.m */; };
 		5A1E253C1E97813E0083F887 /* UIColor+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1E253B1E97813E0083F887 /* UIColor+Custom.m */; };
 		5A1E253F1E9786080083F887 /* NSString+Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1E253E1E9786080083F887 /* NSString+Encryption.m */; };
+		5A1E25421E9789E50083F887 /* UIButton+ExpandArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1E25411E9789E50083F887 /* UIButton+ExpandArea.m */; };
+		5A1E25A31E9B507A0083F887 /* button_hide_kb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A1E259C1E9B507A0083F887 /* button_hide_kb@2x.png */; };
+		5A1E25A41E9B507A0083F887 /* RPDynamicVK.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1E259E1E9B507A0083F887 /* RPDynamicVK.m */; };
+		5A1E25A51E9B507A0083F887 /* RPExBtnTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1E25A01E9B507A0083F887 /* RPExBtnTextField.m */; };
+		5A1E25A61E9B507A0083F887 /* RPExBtnTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1E25A21E9B507A0083F887 /* RPExBtnTextView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +74,15 @@
 		5A1E253B1E97813E0083F887 /* UIColor+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Custom.m"; sourceTree = "<group>"; };
 		5A1E253D1E9786080083F887 /* NSString+Encryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Encryption.h"; sourceTree = "<group>"; };
 		5A1E253E1E9786080083F887 /* NSString+Encryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Encryption.m"; sourceTree = "<group>"; };
+		5A1E25401E9789E50083F887 /* UIButton+ExpandArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ExpandArea.h"; sourceTree = "<group>"; };
+		5A1E25411E9789E50083F887 /* UIButton+ExpandArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ExpandArea.m"; sourceTree = "<group>"; };
+		5A1E259C1E9B507A0083F887 /* button_hide_kb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_hide_kb@2x.png"; sourceTree = "<group>"; };
+		5A1E259D1E9B507A0083F887 /* RPDynamicVK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPDynamicVK.h; sourceTree = "<group>"; };
+		5A1E259E1E9B507A0083F887 /* RPDynamicVK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPDynamicVK.m; sourceTree = "<group>"; };
+		5A1E259F1E9B507A0083F887 /* RPExBtnTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPExBtnTextField.h; sourceTree = "<group>"; };
+		5A1E25A01E9B507A0083F887 /* RPExBtnTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPExBtnTextField.m; sourceTree = "<group>"; };
+		5A1E25A11E9B507A0083F887 /* RPExBtnTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPExBtnTextView.h; sourceTree = "<group>"; };
+		5A1E25A21E9B507A0083F887 /* RPExBtnTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPExBtnTextView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,12 +200,29 @@
 		5A1E25101E97577B0083F887 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				5A1E259B1E9B507A0083F887 /* DynamicVK */,
 				5A1E25111E97577B0083F887 /* QRView.h */,
 				5A1E25121E97577B0083F887 /* QRView.m */,
 				5A1E253A1E97813E0083F887 /* UIColor+Custom.h */,
 				5A1E253B1E97813E0083F887 /* UIColor+Custom.m */,
+				5A1E25401E9789E50083F887 /* UIButton+ExpandArea.h */,
+				5A1E25411E9789E50083F887 /* UIButton+ExpandArea.m */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		5A1E259B1E9B507A0083F887 /* DynamicVK */ = {
+			isa = PBXGroup;
+			children = (
+				5A1E259C1E9B507A0083F887 /* button_hide_kb@2x.png */,
+				5A1E259D1E9B507A0083F887 /* RPDynamicVK.h */,
+				5A1E259E1E9B507A0083F887 /* RPDynamicVK.m */,
+				5A1E259F1E9B507A0083F887 /* RPExBtnTextField.h */,
+				5A1E25A01E9B507A0083F887 /* RPExBtnTextField.m */,
+				5A1E25A11E9B507A0083F887 /* RPExBtnTextView.h */,
+				5A1E25A21E9B507A0083F887 /* RPExBtnTextView.m */,
+			);
+			path = DynamicVK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,6 +337,7 @@
 				5A1E24DB1E973C6B0083F887 /* LaunchScreen.storyboard in Resources */,
 				5A1E24D81E973C6B0083F887 /* Assets.xcassets in Resources */,
 				5A1E24D61E973C6B0083F887 /* Main.storyboard in Resources */,
+				5A1E25A31E9B507A0083F887 /* button_hide_kb@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,10 +365,14 @@
 				5A1E24D31E973C6B0083F887 /* ViewController.m in Sources */,
 				5A1E24D01E973C6B0083F887 /* AppDelegate.m in Sources */,
 				5A1E24CD1E973C6B0083F887 /* main.m in Sources */,
+				5A1E25A61E9B507A0083F887 /* RPExBtnTextView.m in Sources */,
 				5A1E25131E97577B0083F887 /* NSDate+Custom.m in Sources */,
 				5A1E25141E97577B0083F887 /* NSString+Valid.m in Sources */,
 				5A1E25151E97577B0083F887 /* QRView.m in Sources */,
+				5A1E25421E9789E50083F887 /* UIButton+ExpandArea.m in Sources */,
+				5A1E25A51E9B507A0083F887 /* RPExBtnTextField.m in Sources */,
 				5A1E253F1E9786080083F887 /* NSString+Encryption.m in Sources */,
+				5A1E25A41E9B507A0083F887 /* RPDynamicVK.m in Sources */,
 				5A1E253C1E97813E0083F887 /* UIColor+Custom.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
