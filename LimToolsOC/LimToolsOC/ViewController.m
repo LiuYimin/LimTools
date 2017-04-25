@@ -20,16 +20,17 @@
     
     QRView * _qrCodeView = [[QRView alloc] initWithQRString:@"fjlskfjslkfjlsd"];
     _qrCodeView.frame = CGRectMake(40, 120, 200, 200);
-    [self.view addSubview:_qrCodeView];
+//    [self.view addSubview:_qrCodeView];
+    
+    
+    
     
     // Do any additional setup after loading the view, typically from a nib.
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 @end
