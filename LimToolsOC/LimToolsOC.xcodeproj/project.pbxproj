@@ -42,6 +42,8 @@
 		5AA536CA1EA843920065F0CA /* IQToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA536B91EA843920065F0CA /* IQToolbar.m */; };
 		5AA536CB1EA843920065F0CA /* IQUIView+IQKeyboardToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA536BB1EA843920065F0CA /* IQUIView+IQKeyboardToolbar.m */; };
 		5AA536CC1EA843920065F0CA /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5AA536BD1EA843920065F0CA /* IQKeyboardManager.bundle */; };
+		5ADDF7171ED8084E00C3B42B /* RotationCtrlBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADDF7141ED8084E00C3B42B /* RotationCtrlBarView.m */; };
+		5ADDF7181ED8084E00C3B42B /* RotationImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADDF7161ED8084E00C3B42B /* RotationImageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +134,10 @@
 		5AA536BA1EA843920065F0CA /* IQUIView+IQKeyboardToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQUIView+IQKeyboardToolbar.h"; sourceTree = "<group>"; };
 		5AA536BB1EA843920065F0CA /* IQUIView+IQKeyboardToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQUIView+IQKeyboardToolbar.m"; sourceTree = "<group>"; };
 		5AA536BD1EA843920065F0CA /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
+		5ADDF7131ED8084E00C3B42B /* RotationCtrlBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotationCtrlBarView.h; sourceTree = "<group>"; };
+		5ADDF7141ED8084E00C3B42B /* RotationCtrlBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotationCtrlBarView.m; sourceTree = "<group>"; };
+		5ADDF7151ED8084E00C3B42B /* RotationImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotationImageView.h; sourceTree = "<group>"; };
+		5ADDF7161ED8084E00C3B42B /* RotationImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotationImageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +257,7 @@
 			children = (
 				5A16E9A71EAEE03100121542 /* Animator.h */,
 				5A16E9A81EAEE03100121542 /* Animator.m */,
+				5ADDF7121ED8083900C3B42B /* BannerView */,
 				5AA536991EA843920065F0CA /* IQKeyboardManager */,
 				5A1E259B1E9B507A0083F887 /* DynamicVK */,
 				5A1E25111E97577B0083F887 /* QRView.h */,
@@ -353,6 +360,17 @@
 				5AA536BD1EA843920065F0CA /* IQKeyboardManager.bundle */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		5ADDF7121ED8083900C3B42B /* BannerView */ = {
+			isa = PBXGroup;
+			children = (
+				5ADDF7131ED8084E00C3B42B /* RotationCtrlBarView.h */,
+				5ADDF7141ED8084E00C3B42B /* RotationCtrlBarView.m */,
+				5ADDF7151ED8084E00C3B42B /* RotationImageView.h */,
+				5ADDF7161ED8084E00C3B42B /* RotationImageView.m */,
+			);
+			path = BannerView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -502,6 +520,8 @@
 				5AA536C51EA843920065F0CA /* IQKeyboardReturnKeyHandler.m in Sources */,
 				5AA536C81EA843920065F0CA /* IQPreviousNextView.m in Sources */,
 				5AA536BE1EA843920065F0CA /* IQNSArray+Sort.m in Sources */,
+				5ADDF7171ED8084E00C3B42B /* RotationCtrlBarView.m in Sources */,
+				5ADDF7181ED8084E00C3B42B /* RotationImageView.m in Sources */,
 				5A1E25A61E9B507A0083F887 /* RPExBtnTextView.m in Sources */,
 				5AA536CA1EA843920065F0CA /* IQToolbar.m in Sources */,
 				5AA536CB1EA843920065F0CA /* IQUIView+IQKeyboardToolbar.m in Sources */,
