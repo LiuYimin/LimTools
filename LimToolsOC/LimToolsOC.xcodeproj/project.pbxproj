@@ -44,6 +44,15 @@
 		5AA536CC1EA843920065F0CA /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5AA536BD1EA843920065F0CA /* IQKeyboardManager.bundle */; };
 		5ADDF7171ED8084E00C3B42B /* RotationCtrlBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADDF7141ED8084E00C3B42B /* RotationCtrlBarView.m */; };
 		5ADDF7181ED8084E00C3B42B /* RotationImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADDF7161ED8084E00C3B42B /* RotationImageView.m */; };
+		5AF7B5391EF91FC800732903 /* PQCircleAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7B5271EF91FC800732903 /* PQCircleAnimationView.m */; };
+		5AF7B53A1EF91FC800732903 /* PQTopArcAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7B5291EF91FC800732903 /* PQTopArcAnimationView.m */; };
+		5AF7B53B1EF91FC800732903 /* PQVoiceBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7B52B1EF91FC800732903 /* PQVoiceBottomView.m */; };
+		5AF7B53C1EF91FC800732903 /* PQVoiceCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7B52D1EF91FC800732903 /* PQVoiceCircleView.m */; };
+		5AF7B53D1EF91FC800732903 /* PQVoiceInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7B5301EF91FC800732903 /* PQVoiceInputView.m */; };
+		5AF7B53E1EF91FC800732903 /* PQVoiceTopArcView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7B5321EF91FC800732903 /* PQVoiceTopArcView.m */; };
+		5AF7B53F1EF91FC800732903 /* PQVoiceTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7B5341EF91FC800732903 /* PQVoiceTopView.m */; };
+		5AF7B5401EF91FC800732903 /* PQVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7B5361EF91FC800732903 /* PQVoiceView.m */; };
+		5AF7B5411EF91FC800732903 /* UIView+PQViewExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7B5381EF91FC800732903 /* UIView+PQViewExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +147,25 @@
 		5ADDF7141ED8084E00C3B42B /* RotationCtrlBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotationCtrlBarView.m; sourceTree = "<group>"; };
 		5ADDF7151ED8084E00C3B42B /* RotationImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotationImageView.h; sourceTree = "<group>"; };
 		5ADDF7161ED8084E00C3B42B /* RotationImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotationImageView.m; sourceTree = "<group>"; };
+		5AF7B5261EF91FC800732903 /* PQCircleAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PQCircleAnimationView.h; sourceTree = "<group>"; };
+		5AF7B5271EF91FC800732903 /* PQCircleAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PQCircleAnimationView.m; sourceTree = "<group>"; };
+		5AF7B5281EF91FC800732903 /* PQTopArcAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PQTopArcAnimationView.h; sourceTree = "<group>"; };
+		5AF7B5291EF91FC800732903 /* PQTopArcAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PQTopArcAnimationView.m; sourceTree = "<group>"; };
+		5AF7B52A1EF91FC800732903 /* PQVoiceBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PQVoiceBottomView.h; sourceTree = "<group>"; };
+		5AF7B52B1EF91FC800732903 /* PQVoiceBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PQVoiceBottomView.m; sourceTree = "<group>"; };
+		5AF7B52C1EF91FC800732903 /* PQVoiceCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PQVoiceCircleView.h; sourceTree = "<group>"; };
+		5AF7B52D1EF91FC800732903 /* PQVoiceCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PQVoiceCircleView.m; sourceTree = "<group>"; };
+		5AF7B52E1EF91FC800732903 /* PQVoiceInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PQVoiceInput.h; sourceTree = "<group>"; };
+		5AF7B52F1EF91FC800732903 /* PQVoiceInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PQVoiceInputView.h; sourceTree = "<group>"; };
+		5AF7B5301EF91FC800732903 /* PQVoiceInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PQVoiceInputView.m; sourceTree = "<group>"; };
+		5AF7B5311EF91FC800732903 /* PQVoiceTopArcView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PQVoiceTopArcView.h; sourceTree = "<group>"; };
+		5AF7B5321EF91FC800732903 /* PQVoiceTopArcView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PQVoiceTopArcView.m; sourceTree = "<group>"; };
+		5AF7B5331EF91FC800732903 /* PQVoiceTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PQVoiceTopView.h; sourceTree = "<group>"; };
+		5AF7B5341EF91FC800732903 /* PQVoiceTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PQVoiceTopView.m; sourceTree = "<group>"; };
+		5AF7B5351EF91FC800732903 /* PQVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PQVoiceView.h; sourceTree = "<group>"; };
+		5AF7B5361EF91FC800732903 /* PQVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PQVoiceView.m; sourceTree = "<group>"; };
+		5AF7B5371EF91FC800732903 /* UIView+PQViewExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+PQViewExtension.h"; sourceTree = "<group>"; };
+		5AF7B5381EF91FC800732903 /* UIView+PQViewExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+PQViewExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +285,7 @@
 			children = (
 				5A16E9A71EAEE03100121542 /* Animator.h */,
 				5A16E9A81EAEE03100121542 /* Animator.m */,
+				5AF7B5251EF91FC800732903 /* VoiceInput */,
 				5ADDF7121ED8083900C3B42B /* BannerView */,
 				5AA536991EA843920065F0CA /* IQKeyboardManager */,
 				5A1E259B1E9B507A0083F887 /* DynamicVK */,
@@ -371,6 +400,32 @@
 				5ADDF7161ED8084E00C3B42B /* RotationImageView.m */,
 			);
 			path = BannerView;
+			sourceTree = "<group>";
+		};
+		5AF7B5251EF91FC800732903 /* VoiceInput */ = {
+			isa = PBXGroup;
+			children = (
+				5AF7B5261EF91FC800732903 /* PQCircleAnimationView.h */,
+				5AF7B5271EF91FC800732903 /* PQCircleAnimationView.m */,
+				5AF7B5281EF91FC800732903 /* PQTopArcAnimationView.h */,
+				5AF7B5291EF91FC800732903 /* PQTopArcAnimationView.m */,
+				5AF7B52A1EF91FC800732903 /* PQVoiceBottomView.h */,
+				5AF7B52B1EF91FC800732903 /* PQVoiceBottomView.m */,
+				5AF7B52C1EF91FC800732903 /* PQVoiceCircleView.h */,
+				5AF7B52D1EF91FC800732903 /* PQVoiceCircleView.m */,
+				5AF7B52E1EF91FC800732903 /* PQVoiceInput.h */,
+				5AF7B52F1EF91FC800732903 /* PQVoiceInputView.h */,
+				5AF7B5301EF91FC800732903 /* PQVoiceInputView.m */,
+				5AF7B5311EF91FC800732903 /* PQVoiceTopArcView.h */,
+				5AF7B5321EF91FC800732903 /* PQVoiceTopArcView.m */,
+				5AF7B5331EF91FC800732903 /* PQVoiceTopView.h */,
+				5AF7B5341EF91FC800732903 /* PQVoiceTopView.m */,
+				5AF7B5351EF91FC800732903 /* PQVoiceView.h */,
+				5AF7B5361EF91FC800732903 /* PQVoiceView.m */,
+				5AF7B5371EF91FC800732903 /* UIView+PQViewExtension.h */,
+				5AF7B5381EF91FC800732903 /* UIView+PQViewExtension.m */,
+			);
+			path = VoiceInput;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -511,6 +566,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AF7B53F1EF91FC800732903 /* PQVoiceTopView.m in Sources */,
 				5A1E24D31E973C6B0083F887 /* ViewController.m in Sources */,
 				5AA536C41EA843920065F0CA /* IQKeyboardManager.m in Sources */,
 				5AA536C71EA843920065F0CA /* IQBarButtonItem.m in Sources */,
@@ -520,25 +576,33 @@
 				5AA536C51EA843920065F0CA /* IQKeyboardReturnKeyHandler.m in Sources */,
 				5AA536C81EA843920065F0CA /* IQPreviousNextView.m in Sources */,
 				5AA536BE1EA843920065F0CA /* IQNSArray+Sort.m in Sources */,
+				5AF7B53E1EF91FC800732903 /* PQVoiceTopArcView.m in Sources */,
 				5ADDF7171ED8084E00C3B42B /* RotationCtrlBarView.m in Sources */,
 				5ADDF7181ED8084E00C3B42B /* RotationImageView.m in Sources */,
+				5AF7B5401EF91FC800732903 /* PQVoiceView.m in Sources */,
 				5A1E25A61E9B507A0083F887 /* RPExBtnTextView.m in Sources */,
 				5AA536CA1EA843920065F0CA /* IQToolbar.m in Sources */,
 				5AA536CB1EA843920065F0CA /* IQUIView+IQKeyboardToolbar.m in Sources */,
+				5AF7B5391EF91FC800732903 /* PQCircleAnimationView.m in Sources */,
 				5A1E25131E97577B0083F887 /* NSDate+Custom.m in Sources */,
+				5AF7B53C1EF91FC800732903 /* PQVoiceCircleView.m in Sources */,
 				5A1E25141E97577B0083F887 /* NSString+Valid.m in Sources */,
+				5AF7B53A1EF91FC800732903 /* PQTopArcAnimationView.m in Sources */,
 				5A16E9A91EAEE03100121542 /* Animator.m in Sources */,
 				5A1E25151E97577B0083F887 /* QRView.m in Sources */,
 				5AA536C91EA843920065F0CA /* IQTitleBarButtonItem.m in Sources */,
+				5AF7B53B1EF91FC800732903 /* PQVoiceBottomView.m in Sources */,
 				5A1E25421E9789E50083F887 /* UIButton+ExpandArea.m in Sources */,
 				5AA536C01EA843920065F0CA /* IQUITextFieldView+Additions.m in Sources */,
 				5AA536C61EA843920065F0CA /* IQTextView.m in Sources */,
 				5AA536BF1EA843920065F0CA /* IQUIScrollView+Additions.m in Sources */,
+				5AF7B53D1EF91FC800732903 /* PQVoiceInputView.m in Sources */,
 				5A1E25A51E9B507A0083F887 /* RPExBtnTextField.m in Sources */,
 				5AA536C21EA843920065F0CA /* IQUIViewController+Additions.m in Sources */,
 				5AA536C11EA843920065F0CA /* IQUIView+Hierarchy.m in Sources */,
 				5A1E253F1E9786080083F887 /* NSString+Encryption.m in Sources */,
 				5A1E25A41E9B507A0083F887 /* RPDynamicVK.m in Sources */,
+				5AF7B5411EF91FC800732903 /* UIView+PQViewExtension.m in Sources */,
 				5A1E253C1E97813E0083F887 /* UIColor+Custom.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
