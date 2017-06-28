@@ -16,4 +16,12 @@
 #import "NSString+Encryption.h" //字符串加密 解密 操作
 #import "UIButton+ExpandArea.h" //扩大按钮点击区域
 
+//test
+#import "YLTip.h"
+#import "YLSelectView.h"
+#import "YLSelectTimeView.h"
+#import "YLPasswordTip.h"
+#import "YLSexTip.h"
+#import "ScoreView.h"
+
 #endif /* Tools_h */

@@ -27,6 +27,8 @@
 		5A1E25A41E9B507A0083F887 /* RPDynamicVK.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1E259E1E9B507A0083F887 /* RPDynamicVK.m */; };
 		5A1E25A51E9B507A0083F887 /* RPExBtnTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1E25A01E9B507A0083F887 /* RPExBtnTextField.m */; };
 		5A1E25A61E9B507A0083F887 /* RPExBtnTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1E25A21E9B507A0083F887 /* RPExBtnTextView.m */; };
+		5A42D1F61F03B93B00BF38E1 /* CALayer+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A42D1F51F03B93B00BF38E1 /* CALayer+Additions.m */; };
+		5A5038A51F0393860090E448 /* CountdownHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5038A41F0393860090E448 /* CountdownHelper.m */; };
 		5AA536BE1EA843920065F0CA /* IQNSArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA5369C1EA843920065F0CA /* IQNSArray+Sort.m */; };
 		5AA536BF1EA843920065F0CA /* IQUIScrollView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA5369E1EA843920065F0CA /* IQUIScrollView+Additions.m */; };
 		5AA536C01EA843920065F0CA /* IQUITextFieldView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA536A01EA843920065F0CA /* IQUITextFieldView+Additions.m */; };
@@ -53,6 +55,16 @@
 		5AF7B53F1EF91FC800732903 /* PQVoiceTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7B5341EF91FC800732903 /* PQVoiceTopView.m */; };
 		5AF7B5401EF91FC800732903 /* PQVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7B5361EF91FC800732903 /* PQVoiceView.m */; };
 		5AF7B5411EF91FC800732903 /* UIView+PQViewExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7B5381EF91FC800732903 /* UIView+PQViewExtension.m */; };
+		5AF7B5451EF9228E00732903 /* YLTip.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7B5441EF9228E00732903 /* YLTip.m */; };
+		5AF7B5481EFA405C00732903 /* YLSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7B5471EFA405C00732903 /* YLSelectView.m */; };
+		5AF7B54C1EFA413F00732903 /* YLSelectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7B54A1EFA413F00732903 /* YLSelectCell.m */; };
+		5AF7B54D1EFA413F00732903 /* YLSelectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AF7B54B1EFA413F00732903 /* YLSelectCell.xib */; };
+		5AF7B5501EFA4C6900732903 /* YLSelectTimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7B54F1EFA4C6900732903 /* YLSelectTimeView.m */; };
+		5AF7B5531EFA651A00732903 /* YLPasswordTip.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7B5521EFA651A00732903 /* YLPasswordTip.m */; };
+		5AF7B5561EFA6BD900732903 /* YLSexTip.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7B5551EFA6BD900732903 /* YLSexTip.m */; };
+		5AF7B5581EFB595C00732903 /* 五星@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AF7B5571EFB595C00732903 /* 五星@2x.png */; };
+		5AF7B55B1EFB599500732903 /* ScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7B55A1EFB599500732903 /* ScoreView.m */; };
+		5AF7B55D1EFB5ABB00732903 /* 五星_gray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AF7B55C1EFB5ABB00732903 /* 五星_gray@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +124,10 @@
 		5A1E25A01E9B507A0083F887 /* RPExBtnTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPExBtnTextField.m; sourceTree = "<group>"; };
 		5A1E25A11E9B507A0083F887 /* RPExBtnTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPExBtnTextView.h; sourceTree = "<group>"; };
 		5A1E25A21E9B507A0083F887 /* RPExBtnTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPExBtnTextView.m; sourceTree = "<group>"; };
+		5A42D1F41F03B93B00BF38E1 /* CALayer+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Additions.h"; sourceTree = "<group>"; };
+		5A42D1F51F03B93B00BF38E1 /* CALayer+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Additions.m"; sourceTree = "<group>"; };
+		5A5038A31F0393860090E448 /* CountdownHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountdownHelper.h; sourceTree = "<group>"; };
+		5A5038A41F0393860090E448 /* CountdownHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountdownHelper.m; sourceTree = "<group>"; };
 		5AA5369B1EA843920065F0CA /* IQNSArray+Sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQNSArray+Sort.h"; sourceTree = "<group>"; };
 		5AA5369C1EA843920065F0CA /* IQNSArray+Sort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQNSArray+Sort.m"; sourceTree = "<group>"; };
 		5AA5369D1EA843920065F0CA /* IQUIScrollView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQUIScrollView+Additions.h"; sourceTree = "<group>"; };
@@ -166,6 +182,23 @@
 		5AF7B5361EF91FC800732903 /* PQVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PQVoiceView.m; sourceTree = "<group>"; };
 		5AF7B5371EF91FC800732903 /* UIView+PQViewExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+PQViewExtension.h"; sourceTree = "<group>"; };
 		5AF7B5381EF91FC800732903 /* UIView+PQViewExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+PQViewExtension.m"; sourceTree = "<group>"; };
+		5AF7B5431EF9228E00732903 /* YLTip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLTip.h; sourceTree = "<group>"; };
+		5AF7B5441EF9228E00732903 /* YLTip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLTip.m; sourceTree = "<group>"; };
+		5AF7B5461EFA405C00732903 /* YLSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLSelectView.h; sourceTree = "<group>"; };
+		5AF7B5471EFA405C00732903 /* YLSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLSelectView.m; sourceTree = "<group>"; };
+		5AF7B5491EFA413F00732903 /* YLSelectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLSelectCell.h; sourceTree = "<group>"; };
+		5AF7B54A1EFA413F00732903 /* YLSelectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLSelectCell.m; sourceTree = "<group>"; };
+		5AF7B54B1EFA413F00732903 /* YLSelectCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YLSelectCell.xib; sourceTree = "<group>"; };
+		5AF7B54E1EFA4C6900732903 /* YLSelectTimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLSelectTimeView.h; sourceTree = "<group>"; };
+		5AF7B54F1EFA4C6900732903 /* YLSelectTimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLSelectTimeView.m; sourceTree = "<group>"; };
+		5AF7B5511EFA651A00732903 /* YLPasswordTip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLPasswordTip.h; sourceTree = "<group>"; };
+		5AF7B5521EFA651A00732903 /* YLPasswordTip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLPasswordTip.m; sourceTree = "<group>"; };
+		5AF7B5541EFA6BD900732903 /* YLSexTip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLSexTip.h; sourceTree = "<group>"; };
+		5AF7B5551EFA6BD900732903 /* YLSexTip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLSexTip.m; sourceTree = "<group>"; };
+		5AF7B5571EFB595C00732903 /* 五星@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "五星@2x.png"; sourceTree = "<group>"; };
+		5AF7B5591EFB599500732903 /* ScoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreView.h; sourceTree = "<group>"; };
+		5AF7B55A1EFB599500732903 /* ScoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreView.m; sourceTree = "<group>"; };
+		5AF7B55C1EFB5ABB00732903 /* 五星_gray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "五星_gray@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +293,7 @@
 		5A1E24FE1E973D970083F887 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				5AF7B5421EF9220800732903 /* Test */,
 				5A1E250B1E97577B0083F887 /* Function */,
 				5A1E25101E97577B0083F887 /* UI */,
 				5A1E25021E973E630083F887 /* Tools.h */,
@@ -276,6 +310,8 @@
 				5A1E250F1E97577B0083F887 /* NSString+Valid.m */,
 				5A1E253D1E9786080083F887 /* NSString+Encryption.h */,
 				5A1E253E1E9786080083F887 /* NSString+Encryption.m */,
+				5A5038A31F0393860090E448 /* CountdownHelper.h */,
+				5A5038A41F0393860090E448 /* CountdownHelper.m */,
 			);
 			path = Function;
 			sourceTree = "<group>";
@@ -295,6 +331,8 @@
 				5A1E253B1E97813E0083F887 /* UIColor+Custom.m */,
 				5A1E25401E9789E50083F887 /* UIButton+ExpandArea.h */,
 				5A1E25411E9789E50083F887 /* UIButton+ExpandArea.m */,
+				5A42D1F41F03B93B00BF38E1 /* CALayer+Additions.h */,
+				5A42D1F51F03B93B00BF38E1 /* CALayer+Additions.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -428,6 +466,30 @@
 			path = VoiceInput;
 			sourceTree = "<group>";
 		};
+		5AF7B5421EF9220800732903 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				5AF7B5431EF9228E00732903 /* YLTip.h */,
+				5AF7B5441EF9228E00732903 /* YLTip.m */,
+				5AF7B5511EFA651A00732903 /* YLPasswordTip.h */,
+				5AF7B5521EFA651A00732903 /* YLPasswordTip.m */,
+				5AF7B5461EFA405C00732903 /* YLSelectView.h */,
+				5AF7B5471EFA405C00732903 /* YLSelectView.m */,
+				5AF7B5491EFA413F00732903 /* YLSelectCell.h */,
+				5AF7B54A1EFA413F00732903 /* YLSelectCell.m */,
+				5AF7B54B1EFA413F00732903 /* YLSelectCell.xib */,
+				5AF7B54E1EFA4C6900732903 /* YLSelectTimeView.h */,
+				5AF7B54F1EFA4C6900732903 /* YLSelectTimeView.m */,
+				5AF7B5541EFA6BD900732903 /* YLSexTip.h */,
+				5AF7B5551EFA6BD900732903 /* YLSexTip.m */,
+				5AF7B5571EFB595C00732903 /* 五星@2x.png */,
+				5AF7B55C1EFB5ABB00732903 /* 五星_gray@2x.png */,
+				5AF7B5591EFB599500732903 /* ScoreView.h */,
+				5AF7B55A1EFB599500732903 /* ScoreView.m */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -537,6 +599,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AF7B55D1EFB5ABB00732903 /* 五星_gray@2x.png in Resources */,
+				5AF7B54D1EFA413F00732903 /* YLSelectCell.xib in Resources */,
+				5AF7B5581EFB595C00732903 /* 五星@2x.png in Resources */,
 				5AA536CC1EA843920065F0CA /* IQKeyboardManager.bundle in Resources */,
 				5A1E24DB1E973C6B0083F887 /* LaunchScreen.storyboard in Resources */,
 				5A1E24D81E973C6B0083F887 /* Assets.xcassets in Resources */,
@@ -567,17 +632,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AF7B53F1EF91FC800732903 /* PQVoiceTopView.m in Sources */,
+				5A5038A51F0393860090E448 /* CountdownHelper.m in Sources */,
 				5A1E24D31E973C6B0083F887 /* ViewController.m in Sources */,
 				5AA536C41EA843920065F0CA /* IQKeyboardManager.m in Sources */,
+				5A42D1F61F03B93B00BF38E1 /* CALayer+Additions.m in Sources */,
+				5AF7B5561EFA6BD900732903 /* YLSexTip.m in Sources */,
 				5AA536C71EA843920065F0CA /* IQBarButtonItem.m in Sources */,
 				5A1E24D01E973C6B0083F887 /* AppDelegate.m in Sources */,
+				5AF7B54C1EFA413F00732903 /* YLSelectCell.m in Sources */,
 				5A1E24CD1E973C6B0083F887 /* main.m in Sources */,
 				5AA536C31EA843920065F0CA /* IQUIWindow+Hierarchy.m in Sources */,
 				5AA536C51EA843920065F0CA /* IQKeyboardReturnKeyHandler.m in Sources */,
 				5AA536C81EA843920065F0CA /* IQPreviousNextView.m in Sources */,
+				5AF7B5481EFA405C00732903 /* YLSelectView.m in Sources */,
 				5AA536BE1EA843920065F0CA /* IQNSArray+Sort.m in Sources */,
 				5AF7B53E1EF91FC800732903 /* PQVoiceTopArcView.m in Sources */,
 				5ADDF7171ED8084E00C3B42B /* RotationCtrlBarView.m in Sources */,
+				5AF7B5451EF9228E00732903 /* YLTip.m in Sources */,
 				5ADDF7181ED8084E00C3B42B /* RotationImageView.m in Sources */,
 				5AF7B5401EF91FC800732903 /* PQVoiceView.m in Sources */,
 				5A1E25A61E9B507A0083F887 /* RPExBtnTextView.m in Sources */,
@@ -587,10 +658,13 @@
 				5A1E25131E97577B0083F887 /* NSDate+Custom.m in Sources */,
 				5AF7B53C1EF91FC800732903 /* PQVoiceCircleView.m in Sources */,
 				5A1E25141E97577B0083F887 /* NSString+Valid.m in Sources */,
+				5AF7B5501EFA4C6900732903 /* YLSelectTimeView.m in Sources */,
+				5AF7B5531EFA651A00732903 /* YLPasswordTip.m in Sources */,
 				5AF7B53A1EF91FC800732903 /* PQTopArcAnimationView.m in Sources */,
 				5A16E9A91EAEE03100121542 /* Animator.m in Sources */,
 				5A1E25151E97577B0083F887 /* QRView.m in Sources */,
 				5AA536C91EA843920065F0CA /* IQTitleBarButtonItem.m in Sources */,
+				5AF7B55B1EFB599500732903 /* ScoreView.m in Sources */,
 				5AF7B53B1EF91FC800732903 /* PQVoiceBottomView.m in Sources */,
 				5A1E25421E9789E50083F887 /* UIButton+ExpandArea.m in Sources */,
 				5AA536C01EA843920065F0CA /* IQUITextFieldView+Additions.m in Sources */,

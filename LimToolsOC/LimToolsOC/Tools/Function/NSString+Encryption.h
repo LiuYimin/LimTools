@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+//字符串加密
 @interface NSString (Encryption)
 
 - (NSString *)md5;
