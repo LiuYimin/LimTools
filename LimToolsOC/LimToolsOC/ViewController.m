@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "BannerView.h"
+#import "RotationImageView.h"
 #import "Tools.h"
 
 @interface ViewController ()
@@ -18,18 +20,40 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+//    RotationImageView * rIv = [[RotationImageView alloc] initWithFrame:CGRectMake(10, 80, self.view.bounds.size.width - 20, 150)];
+//    [self.view addSubview:rIv];
+//    NSArray *imgs = @[@"IMG_2586.JPG", @"IMG_2591.JPG", @"IMG_2602.JPG"];
+//    [rIv configImgs:imgs];
+//    rIv.tapCallBack = ^(NSUInteger index) {
+//        NSLog(@"点击了第 %lu 张", index);
+//    };
+//    rIv.autoScroll = YES;
+//    rIv.cycleScroll = YES;
+    
+    BannerView *bannerView = [[BannerView alloc] initWithFrame:CGRectMake(10, 80, self.view.bounds.size.width - 20, 150)];
+    [self.view addSubview:bannerView];
+    bannerView.images = @[@"IMG_2586.JPG", @"IMG_2591.JPG", @"IMG_2602.JPG"];
+    
+    
 //    QRView * _qrCodeView = [[QRView alloc] initWithQRString:@"fjlskfjslkfjlsd"];
 //    _qrCodeView.frame = CGRectMake(40, 120, 200, 200);
 //    [self.view addSubview:_qrCodeView];
     
+//    for (UIView *v in self.view.subviews) {
+//        [v removeFromSuperview];
+//    }
+//    
+//    LMVoiceView *lmv = [[LMVoiceView alloc] initWithFrame:CGRectMake(100, 200, 80, 80)];
+//    [self.view addSubview:lmv];
     
-    self.view.backgroundColor = [UIColor lightGrayColor];
-    
-    
-    
-    ScoreView *sv = [ScoreView scoreViewWithFrame:CGRectMake(50, 100, 100, 20)];
-    sv.score = 3;
-    [self.view addSubview:sv];
+//    self.view.backgroundColor = [UIColor lightGrayColor];
+//    
+//    
+//    
+//    ScoreView *sv = [ScoreView scoreViewWithFrame:CGRectMake(50, 100, 100, 20)];
+//    sv.score = 3;
+//    [self.view addSubview:sv];
     
     // Do any additional setup after loading the view, typically from a nib.
 }
@@ -58,9 +82,13 @@
 //        NSLog(@"%@", psd);
 //    }];
     
-    [YLSexTip showSexTipcallBack:^(BOOL male) {
-        NSLog(@"%@", male?@"男":@"女");
-    }];
+//    [YLSexTip showSexTipcallBack:^(BOOL male) {
+//        NSLog(@"%@", male?@"男":@"女");
+//    }];
+    
+//    [YLImageSelectTip showImageSelectCallBack:^(NSUInteger index) {
+//        
+//    }];
 }
 
 @end

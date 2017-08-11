@@ -7,7 +7,7 @@
 //
 
 #import <QuartzCore/QuartzCore.h>
-#import <QuartzCore/QuartzCore.h>
+#import <UIKit/UIKit.h>
 
 @interface CALayer (Additions)
 @property(nonatomic, strong) UIColor *borderColorFromUIColor;

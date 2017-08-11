@@ -7,16 +7,18 @@
 //
 
 #import "RotationImageView.h"
-#import "RotationCtrlBarView.h"
 #import <objc/runtime.h>
 
 static char * imageViewNumKey;
 
 @interface RotationImageView ()<UIScrollViewDelegate>
+{
+    NSTimer     *_timer;
+    NSInteger    _currentIndex;
+}
 
 @property (nonatomic, strong) NSMutableArray        *imgsArray;
 @property (nonatomic, strong) UIScrollView          *contentView;
-@property (nonatomic, strong) RotationCtrlBarView   *ctrlBar;
 
 @end
 
@@ -35,10 +37,8 @@ static char * imageViewNumKey;
         _contentView.delegate = self;
         _contentView.showsVerticalScrollIndicator = NO;
         _contentView.showsHorizontalScrollIndicator = NO;
+        _duration = 4;
         [self addSubview:_contentView];
-        
-        _ctrlBar = [[RotationCtrlBarView alloc] initWithFrame:CGRectMake(self.bounds.size.width-80, self.bounds.size.height-30, 70, 30)];
-        [self addSubview:_ctrlBar];
     }
     return self;
 }
@@ -93,6 +93,36 @@ static char * imageViewNumKey;
     }
 }
 
+- (void)_initAutoScrollTimer {
+    if (_timer) {
+        [_timer invalidate];
+        _timer = nil;
+    }
+    _timer = [NSTimer scheduledTimerWithTimeInterval:self.duration repeats:YES block:^(NSTimer * _Nonnull timer) {
+        if (!_cycleScroll && _currentIndex == _imgsArray.count-1) {//如果不是循环滚动,那么滚动到末尾,就该滚到第一张啦,而且是逆向
+            _currentIndex = -1;
+        }
+        [UIView animateWithDuration:0.25 animations:^{
+            _contentView.contentOffset = CGPointMake((_currentIndex+1)*_contentView.bounds.size.width, 0);
+        } completion:^(BOOL finished) {
+            if (_currentIndex < 0) {
+                _currentIndex = _imgsArray.count-1;
+                _contentView.contentOffset = CGPointMake((_imgsArray.count-1)*self.bounds.size.width, 0);
+            }else if (_currentIndex >= _imgsArray.count) {
+                _currentIndex = 0;
+                _contentView.contentOffset = CGPointMake(0, 0);
+            }
+        }];
+    }];
+}
+
+- (void)removeTimer {
+    if (_timer) {
+        [_timer invalidate];
+        _timer = nil;
+    }
+}
+
 #pragma mark -- Public
 - (void)configImgs:(NSArray<NSString *> *)imgs {
     [_imgsArray removeAllObjects];
@@ -105,8 +135,9 @@ static char * imageViewNumKey;
         [self addHeadFooterImages];
     }
     
-    _ctrlBar.numOfPoints = imgs.count;
-    _ctrlBar.currentNum = 1;
+    if (_autoScroll) {
+        [self _initAutoScrollTimer];
+    }
 }
 
 - (void)setCycleScroll:(BOOL)cycleScroll {
@@ -121,6 +152,15 @@ static char * imageViewNumKey;
     }
 }
 
+- (void)setAutoScroll:(BOOL)autoScroll {
+    _autoScroll = autoScroll;
+    if (_autoScroll) {
+        [self _initAutoScrollTimer];
+    }else {
+        [self removeTimer];
+    }
+}
+
 #pragma mark -- Tap
 - (void)tapAction:(UITapGestureRecognizer *)ges {
     NSNumber *index = objc_getAssociatedObject(ges.self.view, imageViewNumKey);
@@ -129,14 +169,11 @@ static char * imageViewNumKey;
     }
 }
 
-
 #pragma mark -- UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     int index = scrollView.contentOffset.x/self.bounds.size.width;
 
-    if (!_cycleScroll) {
-        
-    }else {
+    if (_cycleScroll && !_autoScroll) {
         if (index < 0) {
             scrollView.contentOffset = CGPointMake((_imgsArray.count-1)*self.bounds.size.width, 0);
         }
@@ -145,6 +182,7 @@ static char * imageViewNumKey;
         }
     }
     
+    _currentIndex = index;
     
     //设置 CtrlBar 的内容
     if (index < 0) {
@@ -152,7 +190,11 @@ static char * imageViewNumKey;
     }else if (index >= _imgsArray.count) {
         index = 0;
     }
-    _ctrlBar.currentNum = index+1;
+    if (self.scrollToIndex) {self.scrollToIndex(index);}
+    
+    if (!_autoScroll) {
+        _currentIndex = index;
+    }
 }
 
 

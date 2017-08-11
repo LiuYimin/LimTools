@@ -23,5 +23,7 @@
 #import "YLPasswordTip.h"
 #import "YLSexTip.h"
 #import "ScoreView.h"
+#import "YLImageSelectTip.h"
+#import "LMVoiceView.h"
 
 #endif /* Tools_h */
