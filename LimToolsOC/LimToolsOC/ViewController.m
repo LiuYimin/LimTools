@@ -10,6 +10,7 @@
 #import "BannerView.h"
 #import "RotationImageView.h"
 #import "Tools.h"
+#import "VideoView.h"
 
 @interface ViewController ()
 
@@ -19,6 +20,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+//    VideoView *vpv = [[VideoView alloc] initWithFrame:CGRectMake(10, 100, self.view.bounds.size.width-20, 200)];
+//    NSString *path = [[NSBundle mainBundle] pathForResource:@"testVideo" ofType:@"mp4"];
+//    vpv.playUrl = [NSURL URLWithString:@"http://wvideo.spriteapp.cn/video/2016/1203/58425ad2a0c1d_wpd.mp4"];//[NSURL fileURLWithPath:path];
+//    [self.view addSubview:vpv];
     
     
 //    RotationImageView * rIv = [[RotationImageView alloc] initWithFrame:CGRectMake(10, 80, self.view.bounds.size.width - 20, 150)];
@@ -31,9 +37,9 @@
 //    rIv.autoScroll = YES;
 //    rIv.cycleScroll = YES;
     
-    BannerView *bannerView = [[BannerView alloc] initWithFrame:CGRectMake(10, 80, self.view.bounds.size.width - 20, 150)];
-    [self.view addSubview:bannerView];
-    bannerView.images = @[@"IMG_2586.JPG", @"IMG_2591.JPG", @"IMG_2602.JPG"];
+//    BannerView *bannerView = [[BannerView alloc] initWithFrame:CGRectMake(10, 80, self.view.bounds.size.width - 20, 150)];
+//    [self.view addSubview:bannerView];
+//    bannerView.images = @[@"IMG_2586.JPG", @"IMG_2591.JPG", @"IMG_2602.JPG"];
     
     
 //    QRView * _qrCodeView = [[QRView alloc] initWithQRString:@"fjlskfjslkfjlsd"];
@@ -51,9 +57,9 @@
 //    
 //    
 //    
-//    ScoreView *sv = [ScoreView scoreViewWithFrame:CGRectMake(50, 100, 100, 20)];
-//    sv.score = 3;
-//    [self.view addSubview:sv];
+    ScoreView *sv = [ScoreView scoreViewWithFrame:CGRectMake(50, 100, 100, 20)];
+    sv.score = 3;
+    [self.view addSubview:sv];
     
     // Do any additional setup after loading the view, typically from a nib.
 }
