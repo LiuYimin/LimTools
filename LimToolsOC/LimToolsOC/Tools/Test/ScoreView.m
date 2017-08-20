@@ -27,10 +27,25 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        [self _initData];
         [self _initUI];
         [self addGes];
     }
     return self;
+}
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    [self _initData];
+    [self _initUI];
+    [self addGes];
+}
+
+- (void)_initData
+{
+    if (_maxScore == 0) {
+        _maxScore = 5;
+    }
 }
 
 - (void)_initUI
@@ -42,7 +57,7 @@
     _starContainerV.clipsToBounds = YES;
     _starImv = [[UIImageView alloc] initWithFrame:_starContainerV.bounds];
     _starImv.image = [UIImage imageNamed:@"五星"];
-    _starWidth = CGRectGetWidth(_starImv.frame)/5.0;
+    _starWidth = CGRectGetWidth(_starImv.frame)/_maxScore;
     
     [_starContainerV addSubview:_starImv];
     [self addSubview:_grayImv];
@@ -62,11 +77,13 @@
     if (_score < 0) {
         _score = 0;
     }
-    if (_score > 5) {
-        _score = 5;
+    if (_score > _maxScore) {
+        _score = _maxScore;
     }
     
-    [self changeUIWithScore:score/5.0];
+    [self changeUIWithScore:score/_maxScore];
+    
+    if (self.scoreCallBack) self.scoreCallBack(_score);
 }
 
 
@@ -82,8 +99,8 @@
     CGPoint lp = [ges locationInView:self];
     float scrore = lp.x/_starWidth;
     self.score = scrore;
-}
 
+}
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

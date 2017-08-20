@@ -44,6 +44,8 @@
 		5A3385EE1F46B7EC00FFFF79 /* play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A3385EC1F46B7EC00FFFF79 /* play@2x.png */; };
 		5A3385F21F46B8A100FFFF79 /* fullscreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A3385F11F46B8A100FFFF79 /* fullscreen@2x.png */; };
 		5A3385F51F46CDD700FFFF79 /* AILoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3385F41F46CDD700FFFF79 /* AILoadingView.m */; };
+		5A33863B1F46E30800FFFF79 /* ACScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A33863A1F46E30800FFFF79 /* ACScoreView.m */; };
+		5A33863D1F46E31100FFFF79 /* ACScoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A33863C1F46E31100FFFF79 /* ACScoreView.xib */; };
 		5A42D1F61F03B93B00BF38E1 /* CALayer+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A42D1F51F03B93B00BF38E1 /* CALayer+Additions.m */; };
 		5A42D2181F04DFCD00BF38E1 /* YLImageSelectTip.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A42D2171F04DFCD00BF38E1 /* YLImageSelectTip.m */; };
 		5A5038A51F0393860090E448 /* CountdownHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5038A41F0393860090E448 /* CountdownHelper.m */; };
@@ -170,6 +172,9 @@
 		5A3385F11F46B8A100FFFF79 /* fullscreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fullscreen@2x.png"; sourceTree = "<group>"; };
 		5A3385F31F46CDD700FFFF79 /* AILoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AILoadingView.h; sourceTree = "<group>"; };
 		5A3385F41F46CDD700FFFF79 /* AILoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AILoadingView.m; sourceTree = "<group>"; };
+		5A3386391F46E30800FFFF79 /* ACScoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACScoreView.h; sourceTree = "<group>"; };
+		5A33863A1F46E30800FFFF79 /* ACScoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACScoreView.m; sourceTree = "<group>"; };
+		5A33863C1F46E31100FFFF79 /* ACScoreView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ACScoreView.xib; sourceTree = "<group>"; };
 		5A42D1F41F03B93B00BF38E1 /* CALayer+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Additions.h"; sourceTree = "<group>"; };
 		5A42D1F51F03B93B00BF38E1 /* CALayer+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Additions.m"; sourceTree = "<group>"; };
 		5A42D2161F04DFCD00BF38E1 /* YLImageSelectTip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLImageSelectTip.h; sourceTree = "<group>"; };
@@ -602,6 +607,9 @@
 				5A3097EC1F20501700103BB2 /* buttom_speecor1@3x.png */,
 				5A3098271F25886500103BB2 /* app_icon_mir@2x.png */,
 				5A3098291F25897F00103BB2 /* app_icon_mir@3x.png */,
+				5A3386391F46E30800FFFF79 /* ACScoreView.h */,
+				5A33863A1F46E30800FFFF79 /* ACScoreView.m */,
+				5A33863C1F46E31100FFFF79 /* ACScoreView.xib */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -726,6 +734,7 @@
 				5AA536CC1EA843920065F0CA /* IQKeyboardManager.bundle in Resources */,
 				5A3098281F25886500103BB2 /* app_icon_mir@2x.png in Resources */,
 				5A30982A1F25897F00103BB2 /* app_icon_mir@3x.png in Resources */,
+				5A33863D1F46E31100FFFF79 /* ACScoreView.xib in Resources */,
 				5A3385EE1F46B7EC00FFFF79 /* play@2x.png in Resources */,
 				5A3385E71F46830D00FFFF79 /* VideoCtrlBar.xib in Resources */,
 				5A1E24DB1E973C6B0083F887 /* LaunchScreen.storyboard in Resources */,
@@ -813,6 +822,7 @@
 				5AA536C11EA843920065F0CA /* IQUIView+Hierarchy.m in Sources */,
 				5A1E253F1E9786080083F887 /* NSString+Encryption.m in Sources */,
 				5A1E25A41E9B507A0083F887 /* RPDynamicVK.m in Sources */,
+				5A33863B1F46E30800FFFF79 /* ACScoreView.m in Sources */,
 				5AF7B5411EF91FC800732903 /* UIView+PQViewExtension.m in Sources */,
 				5A3385DF1F46812B00FFFF79 /* VideoCtrlView.m in Sources */,
 				5A1E253C1E97813E0083F887 /* UIColor+Custom.m in Sources */,

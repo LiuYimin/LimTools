@@ -11,6 +11,7 @@
 #import "RotationImageView.h"
 #import "Tools.h"
 #import "VideoView.h"
+#import "ACScoreView.h"
 
 @interface ViewController ()
 
@@ -57,11 +58,23 @@
 //    
 //    
 //    
-    ScoreView *sv = [ScoreView scoreViewWithFrame:CGRectMake(50, 100, 100, 20)];
-    sv.score = 3;
-    [self.view addSubview:sv];
+//    ScoreView *sv = [ScoreView scoreViewWithFrame:CGRectMake(50, 100, 100, 20)];
+//    sv.score = 3;
+//    [self.view addSubview:sv];
     
+    UIButton *butt = [UIButton buttonWithType:UIButtonTypeCustom];
+    butt.frame = CGRectMake(100, 100, 80, 40);
+    butt.backgroundColor = [UIColor orangeColor];
+    [butt addTarget:self action:@selector(testAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:butt];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)testAction
+{
+    ACScoreView *acv = [[[NSBundle mainBundle] loadNibNamed:@"ACScoreView" owner:nil options:nil] lastObject];
+    acv.frame = self.view.bounds;
+    [self.view addSubview:acv];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -70,6 +83,10 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+   
+    
+    
 //     [YLTip showTipOnWindowTitle:@"您现在上班吗?" image:@"" callBack:^(BOOL cer) {
 //         if (cer) {
 //             NSLog(@"YES");

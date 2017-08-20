@@ -12,6 +12,10 @@
 
 + (instancetype)scoreViewWithFrame:(CGRect)frame;
 
+@property (nonatomic, assign) float  maxScore;
+
 @property (nonatomic, assign) float  score;//0 ~ 5
+
+@property (nonatomic, copy) void(^scoreCallBack)(float score);
 
 @end
