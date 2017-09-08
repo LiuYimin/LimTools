@@ -12,8 +12,12 @@
 #import "Tools.h"
 #import "VideoView.h"
 #import "ACScoreView.h"
+#import "YLAlbumVC.h"
+
+#import "AC_RotationCtrlBarView.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIView *tmpVideoV;
 
 @end
 
@@ -22,11 +26,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    VideoView *vpv = [[VideoView alloc] initWithFrame:CGRectMake(10, 100, self.view.bounds.size.width-20, 200)];
-//    NSString *path = [[NSBundle mainBundle] pathForResource:@"testVideo" ofType:@"mp4"];
-//    vpv.playUrl = [NSURL URLWithString:@"http://wvideo.spriteapp.cn/video/2016/1203/58425ad2a0c1d_wpd.mp4"];//[NSURL fileURLWithPath:path];
-//    [self.view addSubview:vpv];
+    self.view.backgroundColor = [UIColor whiteColor];
     
+//    _tmpVideoV.hidden = YES;
+    VideoView *vpv = [[VideoView alloc] initWithFrame:CGRectMake(20, 80, 240, 120)];
+//    NSString *path = [[NSBundle mainBundle] pathForResource:@"testVideo" ofType:@"mp4"];
+    vpv.playUrl = [NSURL URLWithString:@"http://wvideo.spriteapp.cn/video/2016/1203/58425ad2a0c1d_wpd.mp4"];//[NSURL fileURLWithPath:path];
+    [self.view addSubview:vpv];
+    
+    
+    UIButton *butt = [UIButton buttonWithType:UIButtonTypeCustom];
+    butt.frame = CGRectMake(20, 280, 90, 40);
+    [butt addTarget:self action:@selector(nextAction) forControlEvents:UIControlEventTouchUpInside];
+    butt.backgroundColor = [UIColor yellowColor];
+    [self.view addSubview:butt];
     
 //    RotationImageView * rIv = [[RotationImageView alloc] initWithFrame:CGRectMake(10, 80, self.view.bounds.size.width - 20, 150)];
 //    [self.view addSubview:rIv];
@@ -38,10 +51,18 @@
 //    rIv.autoScroll = YES;
 //    rIv.cycleScroll = YES;
     
-//    BannerView *bannerView = [[BannerView alloc] initWithFrame:CGRectMake(10, 80, self.view.bounds.size.width - 20, 150)];
+//    BannerView *bannerView = [[BannerView alloc] initWithFrame:CGRectMake(10, 80, self.view.bounds.size.width - 20, 180)];
 //    [self.view addSubview:bannerView];
 //    bannerView.images = @[@"IMG_2586.JPG", @"IMG_2591.JPG", @"IMG_2602.JPG"];
-    
+//    
+//    AC_RotationCtrlBarView *acv = [[AC_RotationCtrlBarView alloc] initWithFrame:CGRectMake(10, 270, self.view.bounds.size.width - 20, 20)];
+//    [self.view addSubview:acv];
+//    acv.num = 4;
+//    acv.backgroundColor = [UIColor blackColor];
+//    
+//    bannerView.tapCallBack = ^(NSUInteger index) {
+//        acv.curr = index;
+//    };
     
 //    QRView * _qrCodeView = [[QRView alloc] initWithQRString:@"fjlskfjslkfjlsd"];
 //    _qrCodeView.frame = CGRectMake(40, 120, 200, 200);
@@ -62,12 +83,19 @@
 //    sv.score = 3;
 //    [self.view addSubview:sv];
     
-    UIButton *butt = [UIButton buttonWithType:UIButtonTypeCustom];
-    butt.frame = CGRectMake(100, 100, 80, 40);
-    butt.backgroundColor = [UIColor orangeColor];
-    [butt addTarget:self action:@selector(testAction) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:butt];
-    // Do any additional setup after loading the view, typically from a nib.
+//    UIButton *butt = [UIButton buttonWithType:UIButtonTypeCustom];
+//    butt.frame = CGRectMake(100, 100, 80, 40);
+//    butt.backgroundColor = [UIColor orangeColor];
+//    [butt addTarget:self action:@selector(testAction) forControlEvents:UIControlEventTouchUpInside];
+//    [self.view addSubview:butt];
+//    // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)nextAction
+{
+//    ViewController *v = [[ViewController alloc] init];
+    ViewController *v = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateInitialViewController];
+    [self.navigationController pushViewController:v animated:YES];
 }
 
 - (void)testAction
@@ -84,7 +112,8 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
-   
+//    YLAlbumVC *alvc = [[YLAlbumVC alloc] init];//[[[NSBundle mainBundle] loadNibNamed:@"YLAlbumVC" owner:nil options:nil] lastObject];
+//    [self presentViewController:alvc animated:YES completion:nil];
     
     
 //     [YLTip showTipOnWindowTitle:@"您现在上班吗?" image:@"" callBack:^(BOOL cer) {
@@ -110,6 +139,10 @@
 //    }];
     
 //    [YLImageSelectTip showImageSelectCallBack:^(NSUInteger index) {
+//        
+//    }];
+    
+//    [YLTip showTipOnWindowTitle:@"提示" image:@"" callBack:^(BOOL cer) {
 //        
 //    }];
 }

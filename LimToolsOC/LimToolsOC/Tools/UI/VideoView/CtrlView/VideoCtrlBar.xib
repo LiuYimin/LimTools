@@ -29,19 +29,19 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWK-aN-crb">
-                    <rect key="frame" x="45" y="16.5" width="22" height="12"/>
+                    <rect key="frame" x="43" y="16.5" width="22" height="12"/>
                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1oD-2F-olc">
-                    <rect key="frame" x="72" y="21" width="224" height="2"/>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1oD-2F-olc">
+                    <rect key="frame" x="75" y="21" width="221" height="2"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="2" id="sqP-qW-1y7"/>
                     </constraints>
                 </progressView>
                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="EBR-nO-6iU" customClass="YLSlider">
-                    <rect key="frame" x="70" y="7" width="228" height="31"/>
+                    <rect key="frame" x="73" y="7" width="225" height="31"/>
                     <color key="tintColor" red="0.99215686270000003" green="0.56862745100000001" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
                 </slider>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Jj-t7-ojG">
@@ -49,7 +49,7 @@
                     <constraints>
                         <constraint firstAttribute="width" secondItem="6Jj-t7-ojG" secondAttribute="height" id="O5C-yT-JNL"/>
                     </constraints>
-                    <state key="normal" image="fullscreen.png">
+                    <state key="normal" image="icon_course_enlarge.png">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -70,12 +70,12 @@
                 <constraint firstItem="EBR-nO-6iU" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="OhJ-7J-bXB"/>
                 <constraint firstAttribute="trailing" secondItem="6Jj-t7-ojG" secondAttribute="trailing" id="Pvm-Od-leK"/>
                 <constraint firstItem="6Jj-t7-ojG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="WhQ-C1-HjM"/>
-                <constraint firstItem="CWK-aN-crb" firstAttribute="leading" secondItem="qg1-vu-CgN" secondAttribute="trailing" id="XNB-UP-RyE"/>
+                <constraint firstItem="CWK-aN-crb" firstAttribute="leading" secondItem="qg1-vu-CgN" secondAttribute="trailing" constant="-2" id="XNB-UP-RyE"/>
                 <constraint firstAttribute="bottom" secondItem="6Jj-t7-ojG" secondAttribute="bottom" id="XWt-tJ-RuB"/>
                 <constraint firstItem="CWK-aN-crb" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="bFa-NV-fcr"/>
                 <constraint firstItem="6Jj-t7-ojG" firstAttribute="leading" secondItem="mrF-fH-lOs" secondAttribute="trailing" id="jOk-Gl-t0z"/>
                 <constraint firstItem="mrF-fH-lOs" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="mwG-aF-HTo"/>
-                <constraint firstItem="EBR-nO-6iU" firstAttribute="leading" secondItem="CWK-aN-crb" secondAttribute="trailing" constant="5" id="qe6-8q-FV7"/>
+                <constraint firstItem="EBR-nO-6iU" firstAttribute="leading" secondItem="CWK-aN-crb" secondAttribute="trailing" constant="10" id="qe6-8q-FV7"/>
                 <constraint firstItem="qg1-vu-CgN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="rGy-xF-ufa"/>
                 <constraint firstItem="qg1-vu-CgN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="rdI-68-rp6"/>
                 <constraint firstItem="mrF-fH-lOs" firstAttribute="leading" secondItem="EBR-nO-6iU" secondAttribute="trailing" constant="5" id="t8R-7G-TGR"/>
@@ -94,7 +94,7 @@
         </view>
     </objects>
     <resources>
-        <image name="fullscreen.png" width="32" height="32"/>
+        <image name="icon_course_enlarge.png" width="40" height="44"/>
         <image name="pause.png" width="32" height="32"/>
     </resources>
 </document>

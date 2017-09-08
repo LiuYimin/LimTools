@@ -48,6 +48,11 @@
     }
 }
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    _starWidth = CGRectGetWidth(_starImv.frame)/_maxScore;
+}
+
 - (void)_initUI
 {
     _grayImv = [[UIImageView alloc] initWithFrame:self.bounds];
@@ -86,6 +91,11 @@
     if (self.scoreCallBack) self.scoreCallBack(_score);
 }
 
+- (void)setMaxScore:(float)maxScore {
+    _maxScore = maxScore;
+    self.score = _score;
+}
+
 
 - (void)changeUIWithScore:(float)rate
 {
@@ -97,16 +107,18 @@
 - (void)tapAction:(UITapGestureRecognizer *)ges
 {
     CGPoint lp = [ges locationInView:self];
-    float scrore = lp.x/_starWidth;
-    self.score = scrore;
-
+    float score = lp.x/_starWidth;
+    if (_onlyInteger) {
+        score = ceilf(score);
+    }
+    self.score = score;
 }
 /*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
+ // Only override drawRect: if you perform custom drawing.
+ // An empty implementation adversely affects performance during animation.
+ - (void)drawRect:(CGRect)rect {
+ // Drawing code
+ }
+ */
 
 @end

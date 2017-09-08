@@ -29,7 +29,7 @@
 }
 
 - (void)setup {
-    UIImage *thumbImage = [self getPictureWithName:@"CLRound"];
+    UIImage *thumbImage = [self getPictureWithName:@"icon_course_point"];
     [self setThumbImage:thumbImage forState:UIControlStateHighlighted];
     [self setThumbImage:thumbImage forState:UIControlStateNormal];
 }

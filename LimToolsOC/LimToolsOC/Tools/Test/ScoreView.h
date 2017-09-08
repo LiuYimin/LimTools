@@ -12,6 +12,8 @@
 
 + (instancetype)scoreViewWithFrame:(CGRect)frame;
 
+@property (nonatomic, assign) BOOL   onlyInteger;//是否是只显示整数
+
 @property (nonatomic, assign) float  maxScore;
 
 @property (nonatomic, assign) float  score;//0 ~ 5

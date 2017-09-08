@@ -106,6 +106,16 @@
     _playerV.playUrl = _playUrl;
 }
 
+- (void)setTitleText:(NSString *)titleText {
+    _titleText = titleText;
+    _ctrlV.titleText = _titleText;
+}
+
+- (void)setCoverUrl:(NSString *)coverUrl {
+    _coverUrl = coverUrl;
+    _ctrlV.coverUrl = _coverUrl;
+}
+
 - (void)startSliderTimer
 {
     if (_sliderTimer) {
@@ -130,8 +140,14 @@
     }else {
         [self originalscreen];
     }
+    _ctrlV.isFullScreen = _isFullScreen;
 }
 
+
+
+
+
+#pragma mark -- Somethong Other
 #pragma mark - 全屏
 - (void)fullScreenWithDirection:(UIInterfaceOrientation)direction{
     //记录播放器父类
@@ -139,29 +155,52 @@
     //记录原始大小
     _customFarme  = self.frame;
     _isFullScreen = YES;
-//    [self setStatusBarHidden:_fullStatusBarHidden];
+    
     //添加到Window上
     UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
     [keyWindow addSubview:self];
-    
-    //手动点击需要旋转方向
-    [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger:UIInterfaceOrientationLandscapeRight] forKey:@"orientation"];
-    
-    if (keyWindow.frame.size.width < keyWindow.frame.size.height) {
-        self.frame = CGRectMake(0, 0, CLscreenHeight, CLscreenWidth);
+    if (_isLandscape){
+//        //手动点击需要旋转方向
+//        if (_isUserTapMaxButton) {
+//            [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger:UIInterfaceOrientationLandscapeRight] forKey:@"orientation"];
+//        }
+        if (keyWindow.frame.size.width < keyWindow.frame.size.height) {
+            self.frame = CGRectMake(0, 0, CLscreenHeight, CLscreenWidth);
+        }else{
+            self.frame = CGRectMake(0, 0, CLscreenWidth, CLscreenHeight);
+        }
     }else{
-        self.frame = CGRectMake(0, 0, CLscreenWidth, CLscreenHeight);
+        //播放器所在控制器不支持旋转，采用旋转view的方式实现
+        if (direction == UIInterfaceOrientationLandscapeLeft){
+            [UIView animateWithDuration:0.25 animations:^{
+                self.transform = CGAffineTransformMakeRotation(M_PI / 2);
+            }];
+            [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationLandscapeRight animated:NO];
+        }else if (direction == UIInterfaceOrientationLandscapeRight) {
+            [UIView animateWithDuration:0.25 animations:^{
+                self.transform = CGAffineTransformMakeRotation( - M_PI / 2);
+            }];
+            [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationLandscapeLeft animated:NO];
+        }
+        self.frame = CGRectMake(0, 0, CLscreenHeight, CLscreenWidth);
     }
-    
     [self setNeedsLayout];
     [self layoutIfNeeded];
 }
 #pragma mark - 原始大小
 - (void)originalscreen{
     _isFullScreen = NO;
-//    [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationPortrait animated:NO];
-//    [self setStatusBarHidden:_statusBarHiddenState];
-    [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger:UIInterfaceOrientationPortrait] forKey:@"orientation"];    self.frame = _customFarme;
+    [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationPortrait animated:NO];
+    if (_isLandscape) {
+        //还原为竖屏
+        [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger:UIInterfaceOrientationPortrait] forKey:@"orientation"];
+    }else{
+        //还原
+        [UIView animateWithDuration:0.25 animations:^{
+            self.transform = CGAffineTransformMakeRotation(0);
+        }];
+    }
+    self.frame = _customFarme;
     //还原到原有父类上
     [_fatherView addSubview:self];
 }

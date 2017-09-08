@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface VideoCtrlView : UIView
+@property (nonatomic, assign) BOOL isFullScreen;//是否是全屏,如果是全屏的话,topBar会显示
+@property (nonatomic, strong) NSString *titleText;
+@property (nonatomic, strong) NSString *coverUrl;
+
 @property (nonatomic, copy) void(^sliderBegin)();
 @property (nonatomic, copy) uint(^sliderChanged)(float sliderValue);
 @property (nonatomic, copy) void(^sliderEnd)();

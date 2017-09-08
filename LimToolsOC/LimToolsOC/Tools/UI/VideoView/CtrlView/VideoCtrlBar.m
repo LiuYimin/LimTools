@@ -84,7 +84,7 @@
 
 - (void)setPlay:(BOOL)play {
     _play = play;
-    [_pausePlayButt setImage:[UIImage imageNamed:_play?@"pause":@"play"] forState:UIControlStateNormal];
+    [_pausePlayButt setImage:[UIImage imageNamed:_play?@"icon_course_pause":@"icon_course_play2"] forState:UIControlStateNormal];
 }
 
 #pragma mark -- 时间显示格式转换

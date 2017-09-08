@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "IQKeyboardManager.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,6 +22,15 @@
     IQKeyboardManager *keyboard = [IQKeyboardManager sharedManager];
     keyboard.enable = YES;
     keyboard.shouldResignOnTouchOutside = YES;
+    
+    
+//    ViewController *vc = [[ViewController alloc] init];
+//    UITabBarController *tbCtrl = [[UITabBarController alloc] init];
+//    tbCtrl.viewControllers = @[vc];
+//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:tbCtrl];
+//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//    self.window.rootViewController = nav;
+//    [self.window makeKeyAndVisible];
     
     return YES;
 }

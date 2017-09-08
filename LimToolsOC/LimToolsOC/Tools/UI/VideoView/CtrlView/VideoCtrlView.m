@@ -9,11 +9,14 @@
 #import "VideoCtrlView.h"
 #import "VideoCtrlBar.h"
 #import "AILoadingView.h"
+#import "VideoTopBar.h"
 
 @interface VideoCtrlView ()
 
 @property (nonatomic, strong) VideoCtrlBar  *ctrlBar;
+@property (nonatomic, strong) VideoTopBar   *topBar;
 
+@property (nonatomic, strong) UIImageView   *backCoverImv;
 @property (nonatomic, strong) UIView        *coverView;
 @property (nonatomic, strong) UIButton      *startPlayButt;
 
@@ -65,6 +68,9 @@
     _ctrlBar.frame = CGRectMake(0, self.bounds.size.height-45, self.bounds.size.width, 45);
     _activity.frame = CGRectMake(0, 0, 30, 30);
     _activity.center = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
+    _backCoverImv.frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height);
+    _coverView.frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height);
+    _startPlayButt.center = CGPointMake(CGRectGetMidX(_coverView.bounds), CGRectGetMidY(_coverView.bounds));
 }
 
 #pragma mark -- Private
@@ -77,6 +83,16 @@
 
 - (void)_initUI
 {
+    __weak VideoCtrlView *safeSelf = self;
+
+    _topBar = [[VideoTopBar alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.height, 64)];
+    _topBar.title = _titleText;
+    _topBar.backCall = ^{
+        if (safeSelf.fullScreenCallback) safeSelf.fullScreenCallback();
+    };
+    [self addSubview:_topBar];
+    _topBar.alpha = 0;
+    
     _ctrlBar = [[[NSBundle mainBundle] loadNibNamed:@"VideoCtrlBar" owner:nil options:nil] lastObject];
     _ctrlBar.frame = CGRectMake(0, self.bounds.size.height-45, self.bounds.size.width, 45);
     _ctrlBar.progressBackgroundColor = [UIColor colorWithRed:102/255.0 green:102/255.0 blue:102/255.0 alpha:0.9];;
@@ -84,12 +100,12 @@
     _ctrlBar.progressPlayFinishColor = [UIColor orangeColor];
     [self addSubview:_ctrlBar];
     
-    __weak VideoCtrlView *safeSelf = self;
     {//控制栏的返回事件
         _ctrlBar.playOrPauseCallback = ^(BOOL play) {
             if (safeSelf.playOrPauseCallback) safeSelf.playOrPauseCallback(play);
         };
         _ctrlBar.fullScreenCallback = ^{
+            
             if (safeSelf.fullScreenCallback) safeSelf.fullScreenCallback();
         };
         _ctrlBar.sliderBegin = ^{
@@ -110,6 +126,10 @@
     _activity.strokeColor = [UIColor redColor];
     [self addSubview:_activity];
     
+    _backCoverImv = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height)];
+    _backCoverImv.userInteractionEnabled = YES;
+    [self addSubview:_backCoverImv];
+    
     _coverView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height)];
     _coverView.backgroundColor = [UIColor blackColor];
     _coverView.alpha = 0.4;
@@ -118,17 +138,30 @@
     [_coverView addGestureRecognizer:tap];
     
     _startPlayButt = [UIButton buttonWithType:UIButtonTypeCustom];
-    [_startPlayButt setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
+    [_startPlayButt setImage:[UIImage imageNamed:@"icon_course_play1"] forState:UIControlStateNormal];
     _startPlayButt.frame = CGRectMake(0, 0, 50, 50);
     _startPlayButt.center = CGPointMake(CGRectGetMidX(_coverView.bounds), CGRectGetMidY(_coverView.bounds));
     [_startPlayButt addTarget:self action:@selector(startAction) forControlEvents:UIControlEventTouchUpInside];
     [_coverView addSubview:_startPlayButt];
 }
 
+- (void)setTitleText:(NSString *)titleText {
+    _titleText = titleText;
+    _topBar.title = _titleText;
+}
+
+- (void)setCoverUrl:(NSString *)coverUrl {
+    _coverUrl = coverUrl;
+//    [_backCoverImv sd_setImageWithURL:[NSURL URLWithString:coverUrl]];
+}
+
 #pragma mark -- Action
 - (void)onClickScreen
 {
     _ctrlBar.showBar = !_ctrlBar.showBar;
+    if (_isFullScreen) {
+        _topBar.showBar = !_topBar.showBar;
+    }
 }
 
 - (void)startAction
@@ -141,6 +174,7 @@
 - (void)showCoverView:(BOOL)show
 {
     [UIView animateWithDuration:0.5 animations:^{
+        _backCoverImv.alpha = show?1:0;
         _coverView.alpha = show?1:0;
     }];
 }
