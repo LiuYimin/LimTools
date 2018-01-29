@@ -44,6 +44,7 @@
 		5A42D1F61F03B93B00BF38E1 /* CALayer+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A42D1F51F03B93B00BF38E1 /* CALayer+Additions.m */; };
 		5A42D2181F04DFCD00BF38E1 /* YLImageSelectTip.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A42D2171F04DFCD00BF38E1 /* YLImageSelectTip.m */; };
 		5A5038A51F0393860090E448 /* CountdownHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5038A41F0393860090E448 /* CountdownHelper.m */; };
+		5A56DB311FF25B5D004745C7 /* InitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A56DB301FF25B5D004745C7 /* InitViewController.m */; };
 		5A6DBB0A1F4EC2A400F97BCC /* AC_RotationCtrlBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6DBB091F4EC2A400F97BCC /* AC_RotationCtrlBarView.m */; };
 		5A6DBB2E1F5427BC00F97BCC /* MultipleAlbumVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6DBB2C1F5427BC00F97BCC /* MultipleAlbumVC.m */; };
 		5A6DBB2F1F5427BC00F97BCC /* MultipleAlbumVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A6DBB2D1F5427BC00F97BCC /* MultipleAlbumVC.xib */; };
@@ -85,6 +86,9 @@
 		5AC7D0DE1F3D4F3E006108A4 /* IMG_2591.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 5AC7D0DD1F3D4F3E006108A4 /* IMG_2591.JPG */; };
 		5AC7D0E01F3D4F46006108A4 /* IMG_2602.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 5AC7D0DF1F3D4F46006108A4 /* IMG_2602.JPG */; };
 		5AC7D0E41F3D5A6B006108A4 /* BannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7D0E31F3D5A6B006108A4 /* BannerView.m */; };
+		5AC81A8B201EEAF100D3EC22 /* BarrageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC81A8A201EEAF100D3EC22 /* BarrageManager.m */; };
+		5AC81A8E201EEE9500D3EC22 /* BarrageLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC81A8D201EEE9500D3EC22 /* BarrageLayer.m */; };
+		5AC81A91201EF13C00D3EC22 /* BarrageEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC81A90201EF13C00D3EC22 /* BarrageEntity.m */; };
 		5ADDF7171ED8084E00C3B42B /* RotationCtrlBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADDF7141ED8084E00C3B42B /* RotationCtrlBarView.m */; };
 		5ADDF7181ED8084E00C3B42B /* RotationImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADDF7161ED8084E00C3B42B /* RotationImageView.m */; };
 		5AF7B5391EF91FC800732903 /* PQCircleAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7B5271EF91FC800732903 /* PQCircleAnimationView.m */; };
@@ -190,6 +194,8 @@
 		5A42D2171F04DFCD00BF38E1 /* YLImageSelectTip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLImageSelectTip.m; sourceTree = "<group>"; };
 		5A5038A31F0393860090E448 /* CountdownHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountdownHelper.h; sourceTree = "<group>"; };
 		5A5038A41F0393860090E448 /* CountdownHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountdownHelper.m; sourceTree = "<group>"; };
+		5A56DB2F1FF25B5D004745C7 /* InitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InitViewController.h; sourceTree = "<group>"; };
+		5A56DB301FF25B5D004745C7 /* InitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InitViewController.m; sourceTree = "<group>"; };
 		5A6DBB081F4EC2A400F97BCC /* AC_RotationCtrlBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AC_RotationCtrlBarView.h; sourceTree = "<group>"; };
 		5A6DBB091F4EC2A400F97BCC /* AC_RotationCtrlBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AC_RotationCtrlBarView.m; sourceTree = "<group>"; };
 		5A6DBB2B1F5427BC00F97BCC /* MultipleAlbumVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultipleAlbumVC.h; sourceTree = "<group>"; };
@@ -260,6 +266,12 @@
 		5AC7D0DF1F3D4F46006108A4 /* IMG_2602.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = IMG_2602.JPG; path = ../../IMG_2602.JPG; sourceTree = "<group>"; };
 		5AC7D0E21F3D5A6B006108A4 /* BannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerView.h; sourceTree = "<group>"; };
 		5AC7D0E31F3D5A6B006108A4 /* BannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerView.m; sourceTree = "<group>"; };
+		5AC81A89201EEAF100D3EC22 /* BarrageManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BarrageManager.h; sourceTree = "<group>"; };
+		5AC81A8A201EEAF100D3EC22 /* BarrageManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BarrageManager.m; sourceTree = "<group>"; };
+		5AC81A8C201EEE9500D3EC22 /* BarrageLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BarrageLayer.h; sourceTree = "<group>"; };
+		5AC81A8D201EEE9500D3EC22 /* BarrageLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BarrageLayer.m; sourceTree = "<group>"; };
+		5AC81A8F201EF13C00D3EC22 /* BarrageEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BarrageEntity.h; sourceTree = "<group>"; };
+		5AC81A90201EF13C00D3EC22 /* BarrageEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BarrageEntity.m; sourceTree = "<group>"; };
 		5ADDF7131ED8084E00C3B42B /* RotationCtrlBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotationCtrlBarView.h; sourceTree = "<group>"; };
 		5ADDF7141ED8084E00C3B42B /* RotationCtrlBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotationCtrlBarView.m; sourceTree = "<group>"; };
 		5ADDF7151ED8084E00C3B42B /* RotationImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotationImageView.h; sourceTree = "<group>"; };
@@ -379,6 +391,8 @@
 				5A1E24CF1E973C6B0083F887 /* AppDelegate.m */,
 				5A1E24D11E973C6B0083F887 /* ViewController.h */,
 				5A1E24D21E973C6B0083F887 /* ViewController.m */,
+				5A56DB2F1FF25B5D004745C7 /* InitViewController.h */,
+				5A56DB301FF25B5D004745C7 /* InitViewController.m */,
 				5A1E24D41E973C6B0083F887 /* Main.storyboard */,
 				5A1E24D71E973C6B0083F887 /* Assets.xcassets */,
 				5A1E24D91E973C6B0083F887 /* LaunchScreen.storyboard */,
@@ -447,6 +461,7 @@
 			children = (
 				5A16E9A71EAEE03100121542 /* Animator.h */,
 				5A16E9A81EAEE03100121542 /* Animator.m */,
+				5AC81A88201EE7B900D3EC22 /* Barrage */,
 				5A16C9D71F4BD39F006BE59C /* Camera */,
 				5A032E2F1F4AD13F005E0F38 /* Album */,
 				5A7985481F4EA8E20077CC71 /* VideoView */,
@@ -629,6 +644,19 @@
 				5AC7D0DF1F3D4F46006108A4 /* IMG_2602.JPG */,
 			);
 			path = TmpResource;
+			sourceTree = "<group>";
+		};
+		5AC81A88201EE7B900D3EC22 /* Barrage */ = {
+			isa = PBXGroup;
+			children = (
+				5AC81A89201EEAF100D3EC22 /* BarrageManager.h */,
+				5AC81A8A201EEAF100D3EC22 /* BarrageManager.m */,
+				5AC81A8F201EF13C00D3EC22 /* BarrageEntity.h */,
+				5AC81A90201EF13C00D3EC22 /* BarrageEntity.m */,
+				5AC81A8C201EEE9500D3EC22 /* BarrageLayer.h */,
+				5AC81A8D201EEE9500D3EC22 /* BarrageLayer.m */,
+			);
+			path = Barrage;
 			sourceTree = "<group>";
 		};
 		5ADDF7121ED8083900C3B42B /* BannerView */ = {
@@ -885,6 +913,7 @@
 				5A1E24CD1E973C6B0083F887 /* main.m in Sources */,
 				5AA536C31EA843920065F0CA /* IQUIWindow+Hierarchy.m in Sources */,
 				5AA536C51EA843920065F0CA /* IQKeyboardReturnKeyHandler.m in Sources */,
+				5AC81A91201EF13C00D3EC22 /* BarrageEntity.m in Sources */,
 				5A7985791F4EB12E0077CC71 /* UITabBarController+CLPlayerRotation.m in Sources */,
 				5A7985781F4EB12E0077CC71 /* UINavigationController+CLPlayerRotation.m in Sources */,
 				5AA536C81EA843920065F0CA /* IQPreviousNextView.m in Sources */,
@@ -915,10 +944,12 @@
 				5A7985601F4EA8E20077CC71 /* VideoCtrlBar.m in Sources */,
 				5A1E25151E97577B0083F887 /* QRView.m in Sources */,
 				5AA536C91EA843920065F0CA /* IQTitleBarButtonItem.m in Sources */,
+				5AC81A8E201EEE9500D3EC22 /* BarrageLayer.m in Sources */,
 				5A032E381F4AD2FF005E0F38 /* YLAlbumItemCell.m in Sources */,
 				5AF7B55B1EFB599500732903 /* ScoreView.m in Sources */,
 				5A42D2181F04DFCD00BF38E1 /* YLImageSelectTip.m in Sources */,
 				5AF7B53B1EF91FC800732903 /* PQVoiceBottomView.m in Sources */,
+				5A56DB311FF25B5D004745C7 /* InitViewController.m in Sources */,
 				5A1E25421E9789E50083F887 /* UIButton+ExpandArea.m in Sources */,
 				5AA536C01EA843920065F0CA /* IQUITextFieldView+Additions.m in Sources */,
 				5A7985691F4EA8E20077CC71 /* VideoView.m in Sources */,
@@ -935,6 +966,7 @@
 				5A032E331F4AD156005E0F38 /* YLAlbumVC.m in Sources */,
 				5A33863B1F46E30800FFFF79 /* ACScoreView.m in Sources */,
 				5AF7B5411EF91FC800732903 /* UIView+PQViewExtension.m in Sources */,
+				5AC81A8B201EEAF100D3EC22 /* BarrageManager.m in Sources */,
 				5A1E253C1E97813E0083F887 /* UIColor+Custom.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1085,6 +1117,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = A7H6PE5VV4;
 				INFOPLIST_FILE = LimToolsOC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = liuyimin.LimToolsOC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1097,6 +1130,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = A7H6PE5VV4;
 				INFOPLIST_FILE = LimToolsOC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = liuyimin.LimToolsOC;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -29,7 +29,7 @@
 //    tbCtrl.viewControllers = @[vc];
 //    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:tbCtrl];
 //    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-//    self.window.rootViewController = nav;
+//    self.window.rootViewController = vc;
 //    [self.window makeKeyAndVisible];
     
     return YES;

@@ -9,11 +9,13 @@
 #import "BannerView.h"
 #import "RotationImageView.h"
 #import "RotationCtrlBarView.h"
+#import "AC_RotationCtrlBarView.h"
 
 @interface BannerView ()
 
 @property (nonatomic, strong) RotationImageView     *rIv;
 @property (nonatomic, strong) RotationCtrlBarView   *rcbv;
+@property (nonatomic, strong) AC_RotationCtrlBarView *tctrlbv;
 
 @end
 
@@ -33,14 +35,24 @@
     [self addSubview:_rIv];
     [self addSubview:_rcbv];
     
+//    _tctrlbv = [[AC_RotationCtrlBarView alloc] initWithFrame:CGRectMake(0, self.bounds.size.height-26, self.bounds.size.width, 26)];
+//    _tctrlbv.num = 2;
+//    [self addSubview:_tctrlbv];
+    
+    
     __weak RotationCtrlBarView *safeRCBV = _rcbv;
+    __weak AC_RotationCtrlBarView *safeTBV = _tctrlbv;
     _rIv.scrollToIndex = ^(NSUInteger index) {
         safeRCBV.currentNum = index+1;
+        safeTBV.curr = index+1;
     };
     __weak BannerView *safeSelf = self;
     _rIv.tapCallBack = ^(NSUInteger index) {
         if (safeSelf.tapCallBack) safeSelf.tapCallBack(index);
     };
+    
+    
+    
 }
 
 #pragma mark -- Setter
