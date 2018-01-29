@@ -127,6 +127,7 @@
         manager = [BarrageManager createBarrageManager];
         [manager configContainerView:self.view];
         [manager configBarrages:@[@"这是第一条弹幕", @"哈哈哈", @"嘿嘿嘿,第三", @"我的沙发呢?", @"你在搞什么?", @"Today", @"888888888", @"66666666", @"King 已经接单了", @"隔壁老王去哪了?", @"Oh~~~~", @"日乐购打赏了一架飞机", @"你们在干什么?", @"这是在干神马?", @"666+1", @"+1", @"已报警", @"Xcode已开启", @"还不去敲代码", @"新需求已到,请签收一下", @"你猜我猜不猜", @"屏幕已碎"]];
+        [manager configTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15], NSForegroundColorAttributeName:[UIColor greenColor]}];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [manager startBarrage];
         });

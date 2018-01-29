@@ -20,4 +20,8 @@
 - (void)addBarrage:(NSString *)newBarrage;
 /**开启弹幕*/
 - (void)startBarrage;
+/**关闭弹幕*/
+- (void)stopBarrage;
+/**设置弹幕文字属性*/
+- (void)configTextAttributes:(NSDictionary *)dict;
 @end

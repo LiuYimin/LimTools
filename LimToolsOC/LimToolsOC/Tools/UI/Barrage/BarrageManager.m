@@ -13,6 +13,7 @@
 @property (nonatomic, weak) UIView *containerView;
 @property (nonatomic, strong) NSMutableArray <NSString *> *defaultBarrages;
 @property (nonatomic, strong) NSMutableArray <BarrageEntity *> *entitys;
+@property (nonatomic, strong) NSDictionary *textAttributes;
 @property (nonatomic, strong) NSLock *lock;
 @property (nonatomic, assign) BOOL   bNeedShow;//已经开启了弹幕,如果新增了弹幕,需要展示
 @property (nonatomic, assign) BOOL   bShowing;//正在显示弹幕
@@ -39,6 +40,7 @@
         BarrageEntity *entity = [[BarrageEntity alloc] init];
         entity.fatherLayer = self.containerView.layer;
         entity.contentString = text;
+        [entity configTextAttributes:_textAttributes];
         [_entitys addObject:entity];
     }
 }
@@ -56,6 +58,7 @@
     BarrageEntity *entity = [[BarrageEntity alloc] init];
     entity.fatherLayer = self.containerView.layer;
     entity.contentString = newBarrage;
+    [entity configTextAttributes:_textAttributes];
     [_entitys addObject:entity];
     if (_bNeedShow && !_bShowing) {
         [self startBarrage];
@@ -67,6 +70,21 @@
     _bNeedShow = YES;
     _bShowing = YES;
     [self startBarragesShow];
+}
+/**关闭弹幕*/
+- (void)stopBarrage;
+{
+    _bNeedShow = NO;
+    _bShowing = NO;
+    [self stopBarrageShow];
+}
+/**设置弹幕文字属性*/
+- (void)configTextAttributes:(NSDictionary *)dict;
+{
+    _textAttributes = dict;
+    for (BarrageEntity *entity in _entitys) {
+        [entity configTextAttributes:dict];
+    }
 }
 
 #pragma mark - Private
@@ -98,8 +116,18 @@
     }
 }
 
+- (void)stopBarrageShow
+{
+    for (BarrageEntity *entity in _entitys) {
+        [entity stop];
+    }
+}
+
 - (void)startAnimationWithCentY:(CGFloat)centY
 {
+    if (!_bNeedShow) {
+        return;
+    }
     if (_entitys.count > 0) {
         [_lock lock];
         BarrageEntity *entity = _entitys.firstObject;

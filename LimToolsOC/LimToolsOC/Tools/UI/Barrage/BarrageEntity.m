@@ -39,6 +39,7 @@
     if (!_fatherLayer) {
         self.state = BarrageEntityState_Out;
         if (endOverCallback) endOverCallback(self.state);
+        [self stop];
         return;
     }
     [_fatherLayer addSublayer:_textLayer];
@@ -70,7 +71,26 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(duration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         self.state = BarrageEntityState_Out;
         if (endOverCallback) endOverCallback(self.state);
+        [self stop];
     });
+}
+
+- (void)stop
+{
+    [_textLayer removeFromSuperlayer];
+}
+
+- (void)configTextAttributes:(NSDictionary *)dict
+{
+    if ([dict.allKeys containsObject:NSFontAttributeName]) {
+        UIFont *font = dict[NSFontAttributeName];
+        _textLayer.font = (__bridge CFTypeRef _Nullable)(font.fontName);
+        _textLayer.fontSize = font.pointSize;
+    }
+    if ([dict.allKeys containsObject:NSForegroundColorAttributeName]) {
+        UIColor *color = dict[NSForegroundColorAttributeName];
+        _textLayer.foregroundColor = color.CGColor;
+    }
 }
 
 - (void)setFatherLayer:(CALayer *)fatherLayer {

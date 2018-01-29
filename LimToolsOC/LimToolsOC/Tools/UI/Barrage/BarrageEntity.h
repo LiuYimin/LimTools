@@ -20,4 +20,6 @@ typedef enum {
 @property (nonatomic, assign) CGFloat   centerY;
 @property (nonatomic, weak) CALayer    * _Nullable fatherLayer;
 - (void)startDriftOver:(void(^_Nullable)(BarrageEntityState state))endOverCallback;
+- (void)stop;
+- (void)configTextAttributes:(NSDictionary *)dict;
 @end
