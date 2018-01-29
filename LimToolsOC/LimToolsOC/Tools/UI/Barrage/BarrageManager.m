@@ -8,11 +8,13 @@
 
 #import "BarrageManager.h"
 #import "BarrageEntity.h"
+#import "Trajectory.h"
 
 @interface BarrageManager()
 @property (nonatomic, weak) UIView *containerView;
 @property (nonatomic, strong) NSMutableArray <NSString *> *defaultBarrages;
 @property (nonatomic, strong) NSMutableArray <BarrageEntity *> *entitys;
+@property (nonatomic, strong) NSMutableArray <Trajectory *> *trajectories;
 @property (nonatomic, strong) NSDictionary *textAttributes;
 @property (nonatomic, strong) NSLock *lock;
 @property (nonatomic, assign) BOOL   bNeedShow;//已经开启了弹幕,如果新增了弹幕,需要展示
@@ -60,8 +62,21 @@
     entity.contentString = newBarrage;
     [entity configTextAttributes:_textAttributes];
     [_entitys addObject:entity];
-    if (_bNeedShow && !_bShowing) {
-        [self startBarrage];
+    if (_bNeedShow) {
+        if (_bShowing) {
+            for (Trajectory *tra in _trajectories) {
+                if (tra.state == TrajectoryState_Enter) {
+                    continue;
+                }
+                [_lock lock];
+                BarrageEntity *entity = _entitys.firstObject;
+                [_entitys removeObject:entity];
+                [_lock unlock];
+                [tra addEntity:entity];
+            }
+        }else {
+            [self startBarrage];
+        }
     }
 }
 /**开启弹幕*/
@@ -70,6 +85,7 @@
     _bNeedShow = YES;
     _bShowing = YES;
     [self startBarragesShow];
+//    [self startBarrageShowVersionLow];
 }
 /**关闭弹幕*/
 - (void)stopBarrage;
@@ -102,17 +118,61 @@
 {
     _defaultBarrages = [NSMutableArray array];
     _entitys = [NSMutableArray array];
+    _trajectories = [NSMutableArray array];
+    for (int i = 0; i<3; i++) {
+        CGFloat centY = 180 + i*30;
+        Trajectory *tra = [[Trajectory alloc] init];
+        tra.centY = centY;
+        [_trajectories addObject:tra];
+        __weak Trajectory *safeTra = tra;
+        tra.endOverCallback = ^(BarrageEntityState state) {
+            switch (state) {
+                case BarrageEntityState_Wait:
+                    break;
+                case BarrageEntityState_Enter:
+                {
+                    if (_bNeedShow && _entitys.count > 0) {
+                        [_lock lock];
+                        BarrageEntity *entity = _entitys.firstObject;
+                        [_entitys removeObject:entity];
+                        [_lock unlock];
+                        [safeTra addEntity:entity];
+                    }
+                }
+                    break;
+                case BarrageEntityState_Out:
+                {
+                    if (_entitys.count==0) {
+                        _bShowing = NO;
+                    }
+                }
+                    break;
+            }
+        };
+    }
 }
 
 #pragma mark -- Tool
 
 
 #pragma mark -- Animation
+- (void)startBarrageShowVersionLow
+{
+    for (int i = 0; i < 3; i++) {
+        CGFloat centY = 100 + 30*i;
+        [self startAnimationWithCentY:centY];
+    }
+}
 - (void)startBarragesShow
 {
-    for (int i = 0; i<3; i++) {
-        CGFloat centY = 180 + i*30;
-        [self startAnimationWithCentY:centY];
+    for (Trajectory *tray in _trajectories) {
+        if (_entitys.count > 0) {
+            [_lock lock];
+            BarrageEntity *entity = _entitys.firstObject;
+            [_entitys removeObject:entity];
+            [_lock unlock];
+            [tray addEntity:entity];
+        }
     }
 }
 
@@ -133,7 +193,7 @@
         BarrageEntity *entity = _entitys.firstObject;
         [_entitys removeObject:entity];
         [_lock unlock];
-        
+
         entity.centerY = centY;
         entity.fatherLayer = self.containerView.layer;
         [entity startDriftOver:^(BarrageEntityState state) {

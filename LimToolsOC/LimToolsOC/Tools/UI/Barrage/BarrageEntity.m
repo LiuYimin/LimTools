@@ -29,7 +29,7 @@
 {
     CGFloat length = 0;
     CGSize size = [string boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, 25) options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15]} context:nil].size;
-    length = size.width;
+    length = size.width+10;
     return length;
 }
 

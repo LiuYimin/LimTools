@@ -16,6 +16,7 @@ typedef enum {
 }BarrageEntityState;
 
 @interface BarrageEntity : NSObject
+@property (nonatomic, assign, readonly) BarrageEntityState state;
 @property (nonatomic, strong, nonnull) NSString *contentString;
 @property (nonatomic, assign) CGFloat   centerY;
 @property (nonatomic, weak) CALayer    * _Nullable fatherLayer;
