@@ -22,6 +22,8 @@
 - (void)startBarrage;
 /**关闭弹幕*/
 - (void)stopBarrage;
+///**暂停弹幕*/
+//- (void)pauseBarrage;
 /**设置弹幕文字属性*/
 - (void)configTextAttributes:(NSDictionary *)dict;
 @end

@@ -19,6 +19,8 @@
 
 #import "BarrageManager.h"
 
+#import "LTDatePicker.h"
+
 @interface ViewController ()
 {
     BarrageManager *manager;
@@ -140,6 +142,16 @@
 //        layer.frame = CGRectMake(100, 200, 90, 50);
 //        [self.view.layer addSublayer:layer];
     }
+    
+    
+    {
+//        UIDatePicker *picker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 300)];
+//        [self.view addSubview:picker];
+//        picker.datePickerMode = UIDatePickerModeTime;
+        
+    }
+    
+    
 }
 
 - (void)nextAction
@@ -166,7 +178,11 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [manager addBarrage:[NSString stringWithFormat:@"新增弹幕 %p", event]];
+    [LTDatePicker showCallBack:^(NSDate *date) {
+        //.
+    }];
+//    [manager addBarrage:[NSString stringWithFormat:@"新增弹幕 %p", event]];
+//    [manager pauseBarrage];
 //    YLAlbumVC *alvc = [[YLAlbumVC alloc] init];//[[[NSBundle mainBundle] loadNibNamed:@"YLAlbumVC" owner:nil options:nil] lastObject];
 //    [self presentViewController:alvc animated:YES completion:nil];
     

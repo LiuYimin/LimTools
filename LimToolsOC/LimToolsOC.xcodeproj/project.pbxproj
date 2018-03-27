@@ -90,6 +90,7 @@
 		5AC81A8E201EEE9500D3EC22 /* BarrageLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC81A8D201EEE9500D3EC22 /* BarrageLayer.m */; };
 		5AC81A91201EF13C00D3EC22 /* BarrageEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC81A90201EF13C00D3EC22 /* BarrageEntity.m */; };
 		5AC81A94201F1F2C00D3EC22 /* Trajectory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC81A93201F1F2C00D3EC22 /* Trajectory.m */; };
+		5AC81A9820206CC800D3EC22 /* LTDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC81A9720206CC800D3EC22 /* LTDatePicker.m */; };
 		5ADDF7171ED8084E00C3B42B /* RotationCtrlBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADDF7141ED8084E00C3B42B /* RotationCtrlBarView.m */; };
 		5ADDF7181ED8084E00C3B42B /* RotationImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADDF7161ED8084E00C3B42B /* RotationImageView.m */; };
 		5AF7B5391EF91FC800732903 /* PQCircleAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7B5271EF91FC800732903 /* PQCircleAnimationView.m */; };
@@ -275,6 +276,8 @@
 		5AC81A90201EF13C00D3EC22 /* BarrageEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BarrageEntity.m; sourceTree = "<group>"; };
 		5AC81A92201F1F2C00D3EC22 /* Trajectory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Trajectory.h; sourceTree = "<group>"; };
 		5AC81A93201F1F2C00D3EC22 /* Trajectory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Trajectory.m; sourceTree = "<group>"; };
+		5AC81A9620206CC800D3EC22 /* LTDatePicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTDatePicker.h; sourceTree = "<group>"; };
+		5AC81A9720206CC800D3EC22 /* LTDatePicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTDatePicker.m; sourceTree = "<group>"; };
 		5ADDF7131ED8084E00C3B42B /* RotationCtrlBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotationCtrlBarView.h; sourceTree = "<group>"; };
 		5ADDF7141ED8084E00C3B42B /* RotationCtrlBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotationCtrlBarView.m; sourceTree = "<group>"; };
 		5ADDF7151ED8084E00C3B42B /* RotationImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotationImageView.h; sourceTree = "<group>"; };
@@ -464,6 +467,7 @@
 			children = (
 				5A16E9A71EAEE03100121542 /* Animator.h */,
 				5A16E9A81EAEE03100121542 /* Animator.m */,
+				5AC81A9520206ADA00D3EC22 /* DatePicker */,
 				5AC81A88201EE7B900D3EC22 /* Barrage */,
 				5A16C9D71F4BD39F006BE59C /* Camera */,
 				5A032E2F1F4AD13F005E0F38 /* Album */,
@@ -662,6 +666,15 @@
 				5AC81A8D201EEE9500D3EC22 /* BarrageLayer.m */,
 			);
 			path = Barrage;
+			sourceTree = "<group>";
+		};
+		5AC81A9520206ADA00D3EC22 /* DatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				5AC81A9620206CC800D3EC22 /* LTDatePicker.h */,
+				5AC81A9720206CC800D3EC22 /* LTDatePicker.m */,
+			);
+			path = DatePicker;
 			sourceTree = "<group>";
 		};
 		5ADDF7121ED8083900C3B42B /* BannerView */ = {
@@ -908,6 +921,7 @@
 				5A1E24D31E973C6B0083F887 /* ViewController.m in Sources */,
 				5A7985621F4EA8E20077CC71 /* VideoCtrlView.m in Sources */,
 				5AA536C41EA843920065F0CA /* IQKeyboardManager.m in Sources */,
+				5AC81A9820206CC800D3EC22 /* LTDatePicker.m in Sources */,
 				5A42D1F61F03B93B00BF38E1 /* CALayer+Additions.m in Sources */,
 				5A7985641F4EA8E20077CC71 /* YLSlider.m in Sources */,
 				5AC81A94201F1F2C00D3EC22 /* Trajectory.m in Sources */,

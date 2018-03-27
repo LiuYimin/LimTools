@@ -94,6 +94,14 @@
     _bShowing = NO;
     [self stopBarrageShow];
 }
+/**暂停弹幕*/
+- (void)pauseBarrage;
+{
+    _bNeedShow = NO;
+    for (BarrageEntity *entity in _entitys) {
+        [entity pause];
+    }
+}
 /**设置弹幕文字属性*/
 - (void)configTextAttributes:(NSDictionary *)dict;
 {
@@ -116,6 +124,7 @@
 #pragma mark -- Initialization
 - (void)_initData
 {
+    _lock = [[NSLock alloc] init];
     _defaultBarrages = [NSMutableArray array];
     _entitys = [NSMutableArray array];
     _trajectories = [NSMutableArray array];

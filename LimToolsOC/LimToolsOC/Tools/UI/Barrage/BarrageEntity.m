@@ -9,9 +9,10 @@
 #import "BarrageEntity.h"
 #import "BarrageLayer.h"
 
-@interface BarrageEntity()
+@interface BarrageEntity()<CAAnimationDelegate>
 @property (nonatomic, strong) BarrageLayer *textLayer;
 @property (nonatomic, assign) BarrageEntityState state;
+@property (nonatomic, copy) void (^endOverCallback)(BarrageEntityState);
 @end
 @implementation BarrageEntity
 - (instancetype)init {
@@ -36,6 +37,7 @@
 #pragma mark -- Public
 - (void)startDriftOver:(void (^)(BarrageEntityState))endOverCallback
 {
+    _endOverCallback = endOverCallback;
     if (!_fatherLayer) {
         self.state = BarrageEntityState_Out;
         if (endOverCallback) endOverCallback(self.state);
@@ -66,18 +68,20 @@
     animation.keyPath = @"position";
     animation.toValue = [NSValue valueWithCGPoint:position];
     animation.duration = duration;
+    animation.delegate = self;
     [_textLayer addAnimation:animation forKey:nil];
-
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(duration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        self.state = BarrageEntityState_Out;
-        if (endOverCallback) endOverCallback(self.state);
-        [self stop];
-    });
 }
 
 - (void)stop
 {
     [_textLayer removeFromSuperlayer];
+}
+
+- (void)pause
+{
+    CFTimeInterval pausedTime = [_textLayer convertTime:CACurrentMediaTime() fromLayer:nil];
+    _textLayer.timeOffset = pausedTime;
+    _textLayer.speed = 0.0;
 }
 
 - (void)configTextAttributes:(NSDictionary *)dict
@@ -113,5 +117,12 @@
     if (_fatherLayer) {
         _textLayer.frame = CGRectMake(_fatherLayer.bounds.size.width, _centerY, [self calculateTextLength:_contentString], 25);
     }
+}
+
+#pragma mark -- CAAnimationDelegate
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
+    self.state = BarrageEntityState_Out;
+    if (self.endOverCallback) self.endOverCallback(self.state);
+    [self stop];
 }
 @end

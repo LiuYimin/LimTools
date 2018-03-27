@@ -22,5 +22,6 @@ typedef enum {
 @property (nonatomic, weak) CALayer    * _Nullable fatherLayer;
 - (void)startDriftOver:(void(^_Nullable)(BarrageEntityState state))endOverCallback;
 - (void)stop;
+- (void)pause;
 - (void)configTextAttributes:(NSDictionary *)dict;
 @end
