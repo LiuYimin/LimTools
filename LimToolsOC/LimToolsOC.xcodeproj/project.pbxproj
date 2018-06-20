@@ -43,6 +43,9 @@
 		5A33863D1F46E31100FFFF79 /* ACScoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A33863C1F46E31100FFFF79 /* ACScoreView.xib */; };
 		5A42D1F61F03B93B00BF38E1 /* CALayer+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A42D1F51F03B93B00BF38E1 /* CALayer+Additions.m */; };
 		5A42D2181F04DFCD00BF38E1 /* YLImageSelectTip.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A42D2171F04DFCD00BF38E1 /* YLImageSelectTip.m */; };
+		5A43ABE12085DA32009517BA /* DefaultSearcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A43ABE02085DA32009517BA /* DefaultSearcher.m */; };
+		5A43ABE42085DA4D009517BA /* DefaultSearchUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A43ABE32085DA4D009517BA /* DefaultSearchUI.m */; };
+		5A43ABE72085DA69009517BA /* DefaultSearchLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A43ABE62085DA69009517BA /* DefaultSearchLogic.m */; };
 		5A5038A51F0393860090E448 /* CountdownHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5038A41F0393860090E448 /* CountdownHelper.m */; };
 		5A56DB311FF25B5D004745C7 /* InitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A56DB301FF25B5D004745C7 /* InitViewController.m */; };
 		5A6DBB0A1F4EC2A400F97BCC /* AC_RotationCtrlBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6DBB091F4EC2A400F97BCC /* AC_RotationCtrlBarView.m */; };
@@ -194,6 +197,13 @@
 		5A42D1F51F03B93B00BF38E1 /* CALayer+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Additions.m"; sourceTree = "<group>"; };
 		5A42D2161F04DFCD00BF38E1 /* YLImageSelectTip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLImageSelectTip.h; sourceTree = "<group>"; };
 		5A42D2171F04DFCD00BF38E1 /* YLImageSelectTip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLImageSelectTip.m; sourceTree = "<group>"; };
+		5A43ABDF2085DA32009517BA /* DefaultSearcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefaultSearcher.h; sourceTree = "<group>"; };
+		5A43ABE02085DA32009517BA /* DefaultSearcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DefaultSearcher.m; sourceTree = "<group>"; };
+		5A43ABE22085DA4D009517BA /* DefaultSearchUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefaultSearchUI.h; sourceTree = "<group>"; };
+		5A43ABE32085DA4D009517BA /* DefaultSearchUI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DefaultSearchUI.m; sourceTree = "<group>"; };
+		5A43ABE52085DA69009517BA /* DefaultSearchLogic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefaultSearchLogic.h; sourceTree = "<group>"; };
+		5A43ABE62085DA69009517BA /* DefaultSearchLogic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DefaultSearchLogic.m; sourceTree = "<group>"; };
+		5A43ABE82085DA9A009517BA /* SearchProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchProtocol.h; sourceTree = "<group>"; };
 		5A5038A31F0393860090E448 /* CountdownHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountdownHelper.h; sourceTree = "<group>"; };
 		5A5038A41F0393860090E448 /* CountdownHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountdownHelper.m; sourceTree = "<group>"; };
 		5A56DB2F1FF25B5D004745C7 /* InitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InitViewController.h; sourceTree = "<group>"; };
@@ -467,6 +477,7 @@
 			children = (
 				5A16E9A71EAEE03100121542 /* Animator.h */,
 				5A16E9A81EAEE03100121542 /* Animator.m */,
+				5A43ABDA2085D97C009517BA /* Search */,
 				5AC81A9520206ADA00D3EC22 /* DatePicker */,
 				5AC81A88201EE7B900D3EC22 /* Barrage */,
 				5A16C9D71F4BD39F006BE59C /* Camera */,
@@ -500,6 +511,52 @@
 				5A1E25A21E9B507A0083F887 /* RPExBtnTextView.m */,
 			);
 			path = DynamicVK;
+			sourceTree = "<group>";
+		};
+		5A43ABDA2085D97C009517BA /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				5A43ABDE2085DA12009517BA /* DefaultSearcher */,
+				5A43ABDB2085D9CD009517BA /* DisplayUI */,
+				5A43ABDC2085D9CD009517BA /* Logic */,
+				5A43ABDD2085D9CD009517BA /* Protocol */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		5A43ABDB2085D9CD009517BA /* DisplayUI */ = {
+			isa = PBXGroup;
+			children = (
+				5A43ABE22085DA4D009517BA /* DefaultSearchUI.h */,
+				5A43ABE32085DA4D009517BA /* DefaultSearchUI.m */,
+			);
+			path = DisplayUI;
+			sourceTree = "<group>";
+		};
+		5A43ABDC2085D9CD009517BA /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				5A43ABE52085DA69009517BA /* DefaultSearchLogic.h */,
+				5A43ABE62085DA69009517BA /* DefaultSearchLogic.m */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		5A43ABDD2085D9CD009517BA /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				5A43ABE82085DA9A009517BA /* SearchProtocol.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		5A43ABDE2085DA12009517BA /* DefaultSearcher */ = {
+			isa = PBXGroup;
+			children = (
+				5A43ABDF2085DA32009517BA /* DefaultSearcher.h */,
+				5A43ABE02085DA32009517BA /* DefaultSearcher.m */,
+			);
+			path = DefaultSearcher;
 			sourceTree = "<group>";
 		};
 		5A6DBB2A1F5427A000F97BCC /* MultipleChoice */ = {
@@ -921,6 +978,7 @@
 				5A1E24D31E973C6B0083F887 /* ViewController.m in Sources */,
 				5A7985621F4EA8E20077CC71 /* VideoCtrlView.m in Sources */,
 				5AA536C41EA843920065F0CA /* IQKeyboardManager.m in Sources */,
+				5A43ABE42085DA4D009517BA /* DefaultSearchUI.m in Sources */,
 				5AC81A9820206CC800D3EC22 /* LTDatePicker.m in Sources */,
 				5A42D1F61F03B93B00BF38E1 /* CALayer+Additions.m in Sources */,
 				5A7985641F4EA8E20077CC71 /* YLSlider.m in Sources */,
@@ -936,6 +994,7 @@
 				5AC81A91201EF13C00D3EC22 /* BarrageEntity.m in Sources */,
 				5A7985791F4EB12E0077CC71 /* UITabBarController+CLPlayerRotation.m in Sources */,
 				5A7985781F4EB12E0077CC71 /* UINavigationController+CLPlayerRotation.m in Sources */,
+				5A43ABE72085DA69009517BA /* DefaultSearchLogic.m in Sources */,
 				5AA536C81EA843920065F0CA /* IQPreviousNextView.m in Sources */,
 				5A79855F1F4EA8E20077CC71 /* AILoadingView.m in Sources */,
 				5AF7B5481EFA405C00732903 /* YLSelectView.m in Sources */,
@@ -967,6 +1026,7 @@
 				5AC81A8E201EEE9500D3EC22 /* BarrageLayer.m in Sources */,
 				5A032E381F4AD2FF005E0F38 /* YLAlbumItemCell.m in Sources */,
 				5AF7B55B1EFB599500732903 /* ScoreView.m in Sources */,
+				5A43ABE12085DA32009517BA /* DefaultSearcher.m in Sources */,
 				5A42D2181F04DFCD00BF38E1 /* YLImageSelectTip.m in Sources */,
 				5AF7B53B1EF91FC800732903 /* PQVoiceBottomView.m in Sources */,
 				5A56DB311FF25B5D004745C7 /* InitViewController.m in Sources */,
@@ -1136,6 +1196,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = A7H6PE5VV4;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = LimToolsOC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1149,6 +1210,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = A7H6PE5VV4;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = LimToolsOC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

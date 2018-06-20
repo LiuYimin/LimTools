@@ -24,6 +24,7 @@
 @interface ViewController ()
 {
     BarrageManager *manager;
+    UISwitch *_switchBtn;
 }
 @property (weak, nonatomic) IBOutlet UIView *tmpVideoV;
 
@@ -36,6 +37,11 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
+    _switchBtn = [[UISwitch alloc] initWithFrame:CGRectMake(100, 200, 90, 40)];
+    [self.view addSubview:_switchBtn];
+    _switchBtn.tintColor = [UIColor orangeColor];
+    [_switchBtn addTarget:self action:@selector(onChanged:) forControlEvents:UIControlEventValueChanged];
+    
 //    InitViewController *ivc = [[InitViewController alloc] init];
 //    [self presentViewController:ivc animated:YES completion:nil];
     
@@ -44,8 +50,8 @@
 //        NSLog(@"i = %ld", i);
 //    }
     
-    NSString *setr = @"AAAA";
-    NSNumber *bbNu = @123;
+//    NSString *setr = @"AAAA";
+//    NSNumber *bbNu = @123;
     
     
 //    _tmpVideoV.hidden = YES;
@@ -126,13 +132,13 @@
     
     
     {
-        manager = [BarrageManager createBarrageManager];
-        [manager configContainerView:self.view];
-        [manager configBarrages:@[@"这是第一条弹幕", @"哈哈哈", @"嘿嘿嘿,第三", @"我的沙发呢?", @"你在搞什么?", @"Today", @"888888888", @"66666666", @"King 已经接单了", @"隔壁老王去哪了?", @"Oh~~~~", @"日乐购打赏了一架飞机", @"你们在干什么?", @"这是在干神马?", @"666+1", @"+1", @"已报警", @"Xcode已开启", @"还不去敲代码", @"新需求已到,请签收一下", @"你猜我猜不猜", @"屏幕已碎", @"🙂哈哈哈哈😆"]];
-        [manager configTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15], NSForegroundColorAttributeName:[UIColor greenColor]}];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [manager startBarrage];
-        });
+//        manager = [BarrageManager createBarrageManager];
+//        [manager configContainerView:self.view];
+//        [manager configBarrages:@[@"这是第一条弹幕", @"哈哈哈", @"嘿嘿嘿,第三", @"我的沙发呢?", @"你在搞什么?", @"Today", @"888888888", @"66666666", @"King 已经接单了", @"隔壁老王去哪了?", @"Oh~~~~", @"日乐购打赏了一架飞机", @"你们在干什么?", @"这是在干神马?", @"666+1", @"+1", @"已报警", @"Xcode已开启", @"还不去敲代码", @"新需求已到,请签收一下", @"你猜我猜不猜", @"屏幕已碎", @"🙂哈哈哈哈😆"]];
+//        [manager configTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15], NSForegroundColorAttributeName:[UIColor greenColor]}];
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            [manager startBarrage];
+//        });
         
 //        CATextLayer *layer = [CATextLayer layer];
 //        layer.string = @"ABCKKD";
@@ -151,7 +157,60 @@
         
     }
     
-    
+//    {
+//        [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor], NSFontAttributeName: [UIFont systemFontOfSize:18]}];
+//        self.title = @"ABCK";
+//
+//        UINavigationBar *bar = self.navigationController.navigationBar;
+//        for (UIView *v in bar.subviews) {
+//            NSLog(@"%@", v);
+//        }
+//        bar.barTintColor = [UIColor colorWithRed:0.5 green:1 blue:0.5 alpha:0.3];
+//
+//        self.navigationItem.title = @"Home";
+//
+//        UIView *v = [UIView new];
+//        v.frame = CGRectMake(0, 0, 200, 90);
+//        [self.view addSubview:v];
+//        v.backgroundColor = [UIColor blueColor];
+//    }
+//
+//    {
+//        UIButton *btn = [UIButton new];
+//        btn.frame = CGRectMake(100, 330, 100, 100);
+//        [btn setTitle:@"ABC" forState:UIControlStateNormal];
+//        [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//        btn.backgroundColor = [UIColor brownColor];
+//        [self.view addSubview:btn];
+//
+//        UIControl *ctrl = [UIControl new];
+//        ctrl.backgroundColor = [UIColor redColor];
+//        ctrl.frame = CGRectMake(100, 100, 200, 150);
+//        [self.view addSubview:ctrl];
+//        UILabel *ctrlTitle = [UILabel new];
+//        ctrlTitle.text = @"DEF";
+//        ctrlTitle.frame = ctrl.bounds;
+//        ctrlTitle.textColor = [UIColor whiteColor];
+//        [ctrl addSubview:ctrlTitle];
+//        ctrlTitle.textAlignment = NSTextAlignmentCenter;
+//        ctrlTitle.center = CGPointMake(ctrl.bounds.size.width/2.f, ctrl.bounds.size.height/2.f);
+//
+//        [ctrl addTarget:self action:@selector(onTouchCtrlV:) forControlEvents:UIControlEventTouchUpInside];
+//    }
+}
+
+- (void)onTouchCtrlV:(UIControl *)ctrl
+{
+    NSLog(@"abc");
+}
+
+- (void)onChanged:(UISwitch *)sender
+{
+//    [sender setOn:NO];
+    [sender setOn:NO animated:YES];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+    });
 }
 
 - (void)nextAction

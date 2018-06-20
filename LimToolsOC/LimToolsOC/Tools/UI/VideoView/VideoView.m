@@ -170,6 +170,8 @@
             self.frame = CGRectMake(0, 0, CLscreenWidth, CLscreenHeight);
         }
     }else{
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored"-Wdeprecated-declarations"
         //播放器所在控制器不支持旋转，采用旋转view的方式实现
         if (direction == UIInterfaceOrientationLandscapeLeft){
             [UIView animateWithDuration:0.25 animations:^{
@@ -182,6 +184,7 @@
             }];
             [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationLandscapeLeft animated:NO];
         }
+#pragma clang diagnostic pop
         self.frame = CGRectMake(0, 0, CLscreenHeight, CLscreenWidth);
     }
     [self setNeedsLayout];
@@ -190,7 +193,10 @@
 #pragma mark - 原始大小
 - (void)originalscreen{
     _isFullScreen = NO;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored"-Wdeprecated-declarations"
     [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationPortrait animated:NO];
+#pragma clang diagnostic pop
     if (_isLandscape) {
         //还原为竖屏
         [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger:UIInterfaceOrientationPortrait] forKey:@"orientation"];

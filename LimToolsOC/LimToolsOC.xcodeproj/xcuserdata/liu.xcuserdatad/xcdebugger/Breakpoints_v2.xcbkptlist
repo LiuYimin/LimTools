@@ -144,36 +144,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "Yes"
-            filePath = "LimToolsOC/ViewController.m"
-            timestampString = "539061184.66945"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "7">
-            <Actions>
-               <BreakpointActionProxy
-                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
-                  <ActionContent
-                     consoleCommand = "expr NSLog(@&quot;Setr:%p&quot;, setr)">
-                  </ActionContent>
-               </BreakpointActionProxy>
-               <BreakpointActionProxy
-                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
-                  <ActionContent
-                     consoleCommand = "expr NSLog(@&quot;bbNu:%p&quot;, bbNu)">
-                  </ActionContent>
-               </BreakpointActionProxy>
-            </Actions>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -193,44 +163,44 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LimToolsOC/Tools/UI/DatePicker/LTDatePicker.m"
-            timestampString = "539061184.669812"
+            filePath = "LimToolsOC/Tools/UI/Search/DefaultSearcher/DefaultSearcher.m"
+            timestampString = "545736465.534533"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "+showCallBack:"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "-init"
             landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__29+[LTDatePicker showCallBack:]_block_invoke_2"
+                  symbolName = "-[DefaultSearcher init]"
                   moduleName = "LimToolsOC"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/liu/Documents/Study/iOS/LimTools/LimToolsOC/LimToolsOC/Tools/UI/DatePicker/LTDatePicker.m"
-                  timestampString = "539061184.696064"
+                  urlString = "file:///Users/liu/Documents/Study/iOS/LimTools/LimToolsOC/LimToolsOC/Tools/UI/Search/DefaultSearcher/DefaultSearcher.m"
+                  timestampString = "550983699.631469"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "55">
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "294">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__29+[LTDatePicker showCallBack:]_block_invoke_2"
+                  symbolName = "__23-[DefaultSearcher init]_block_invoke.9"
                   moduleName = "LimToolsOC"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/liu/Documents/Study/iOS/LimTools/LimToolsOC/LimToolsOC/Tools/UI/DatePicker/LTDatePicker.m"
-                  timestampString = "539061184.698472"
+                  urlString = "file:///Users/liu/Documents/Study/iOS/LimTools/LimToolsOC/LimToolsOC/Tools/UI/Search/DefaultSearcher/DefaultSearcher.m"
+                  timestampString = "550983699.634171"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "63">
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "52">
                </Location>
             </Locations>
          </BreakpointContent>
