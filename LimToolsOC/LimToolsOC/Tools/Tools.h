@@ -25,5 +25,6 @@
 #import "ScoreView.h"
 #import "YLImageSelectTip.h"
 #import "LMVoiceView.h"
+#import "LMStringHandler.h"
 
 #endif /* Tools_h */

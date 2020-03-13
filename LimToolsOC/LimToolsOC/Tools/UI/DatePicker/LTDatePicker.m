@@ -195,7 +195,7 @@ static LTDatePicker *datePicker = nil;
 {
     NSString *year = _years[_yearIndex];
     NSString *month = _months[_monthIndex];
-    NSString *day = [NSString stringWithFormat:@"%2ld", _dayIndex];
+    NSString *day = [NSString stringWithFormat:@"%2ld", (long)_dayIndex];
     NSString *hour = _hours[_hourIndex];
     NSString *minute = _minutes[_minuteIndex];
     return @[year,month,day,hour,minute];
@@ -221,7 +221,7 @@ static LTDatePicker *datePicker = nil;
     }else if (component == 1) {
         title = [NSString stringWithFormat:@"%@月", _months[row]];
     }else if (component == 2) {
-        title = [NSString stringWithFormat:@"%02ld日", row+1];
+        title = [NSString stringWithFormat:@"%02ld日", (long)(row+1)];
     }else if (component == 3) {
         title = [NSString stringWithFormat:@"%@时", _hours[row]];
     }else {

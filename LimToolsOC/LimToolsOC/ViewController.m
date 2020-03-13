@@ -21,10 +21,15 @@
 
 #import "LTDatePicker.h"
 
-@interface ViewController ()
+#import "LMAddImageShower.h"
+#import "LMAddImagePresentTransition.h"
+
+@interface ViewController ()<UIViewControllerTransitioningDelegate>
 {
     BarrageManager *manager;
     UISwitch *_switchBtn;
+    LMAddImagePresentTransition * _presentAnimator;
+    LMAddImagePresentTransition * _dismissAnimator;
 }
 @property (weak, nonatomic) IBOutlet UIView *tmpVideoV;
 
@@ -35,12 +40,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    LMStringHandler *handler = [LMStringHandler new];
+    NSString *txt1 = @"0test1国家";
+    NSString *txt2 = @"01123j哈哈";
+    BOOL ret = [handler compareString:txt1 compare:txt2];
+    NSLog(@"%@ %@ %@", txt1, ret?@"大于":@"小于", txt2);
+    return;
     
-    _switchBtn = [[UISwitch alloc] initWithFrame:CGRectMake(100, 200, 90, 40)];
-    [self.view addSubview:_switchBtn];
-    _switchBtn.tintColor = [UIColor orangeColor];
-    [_switchBtn addTarget:self action:@selector(onChanged:) forControlEvents:UIControlEventValueChanged];
+//    _presentAnimator = [[LMAddImagePresentTransition alloc] init];
+//    _dismissAnimator = [[LMAddImagePresentTransition alloc] init];
+//    _presentAnimator.isPresent = YES;
+//
+//    self.transitioningDelegate = self;
+//
+//
+//    self.view.backgroundColor = [UIColor whiteColor];
+//
+//    _switchBtn = [[UISwitch alloc] initWithFrame:CGRectMake(100, 200, 90, 40)];
+//    [self.view addSubview:_switchBtn];
+//    _switchBtn.tintColor = [UIColor orangeColor];
+//    [_switchBtn addTarget:self action:@selector(onChanged:) forControlEvents:UIControlEventValueChanged];
     
 //    InitViewController *ivc = [[InitViewController alloc] init];
 //    [self presentViewController:ivc animated:YES completion:nil];
@@ -197,6 +216,18 @@
 //
 //        [ctrl addTarget:self action:@selector(onTouchCtrlV:) forControlEvents:UIControlEventTouchUpInside];
 //    }
+    
+//    self.view.backgroundColor = [UIColor lightGrayColor];
+//    LMAddImageShower *footer = [[[NSBundle mainBundle] loadNibNamed:@"LMAddImageShower" owner:nil options:nil] lastObject];
+//    footer.ownerVC = self;
+//    footer.presenter = _presentAnimator;
+//    footer.dismisser = _dismissAnimator;
+//    CGFloat height = (self.view.bounds.size.width - 24 - 10)/3.f + 25;
+//    footer.frame = CGRectMake(0, 300, self.view.bounds.size.width, height);
+//    LMImage *img = [LMImage new];
+//    img.originalImage = [UIImage imageNamed:@"IMG_2586.JPG"];
+//    [footer addImage:img];
+//    [self.view addSubview:footer];
 }
 
 - (void)onTouchCtrlV:(UIControl *)ctrl
@@ -237,9 +268,9 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [LTDatePicker showCallBack:^(NSDate *date) {
-        //.
-    }];
+//    [LTDatePicker showCallBack:^(NSDate *date) {
+//        //.
+//    }];
 //    [manager addBarrage:[NSString stringWithFormat:@"新增弹幕 %p", event]];
 //    [manager pauseBarrage];
 //    YLAlbumVC *alvc = [[YLAlbumVC alloc] init];//[[[NSBundle mainBundle] loadNibNamed:@"YLAlbumVC" owner:nil options:nil] lastObject];
@@ -275,6 +306,18 @@
 //    [YLTip showTipOnWindowTitle:@"提示" image:@"" callBack:^(BOOL cer) {
 //        
 //    }];
+}
+
+
+
+
+// present动画
+-(id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source{
+    return _presentAnimator;
+}
+-(id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
+{
+    return _dismissAnimator;
 }
 
 @end

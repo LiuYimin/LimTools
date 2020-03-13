@@ -40,12 +40,12 @@
 #pragma mark -- Public
 - (void)setNumOfPoints:(NSUInteger)numOfPoints {
     _numOfPoints = numOfPoints;
-    _textLab.text = [NSString stringWithFormat:@"1/%ld", _numOfPoints];
+    _textLab.text = [NSString stringWithFormat:@"1/%lu", (unsigned long)_numOfPoints];
 }
 
 - (void)setCurrentNum:(NSUInteger)currentNum {
     _currentNum = currentNum;
-    _textLab.text = [NSString stringWithFormat:@"%ld/%ld", _currentNum, _numOfPoints];
+    _textLab.text = [NSString stringWithFormat:@"%lu/%lu", (unsigned long)_currentNum, (unsigned long)_numOfPoints];
 }
 
 /*
